@@ -1,0 +1,102 @@
+.entry-intro .subhero h1 { font-size: clamp(2.2rem, 5vw, 3.65rem); }
+.entry-panel > h2 { font-size: clamp(1.35rem, 2.5vw, 1.8rem); }
+.entry-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .4rem;
+  margin-block: 1.25rem;
+}
+.entry-steps button {
+  display: grid;
+  grid-template-columns: 1.55rem minmax(0, 1fr);
+  align-items: start;
+  gap: .45rem;
+  width: 100%;
+  height: 100%;
+  min-height: 2.9rem;
+  padding: .5rem .35rem;
+  border-bottom: 3px solid var(--line);
+  color: var(--color-mfg-steel);
+  text-align: left;
+  font-size: .8rem;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+.entry-steps button[aria-current="step"] { border-color: var(--color-mfg-red); color: var(--color-mfg-red); }
+.entry-steps button:hover:not(:disabled) { background: var(--color-mfg-paper); }
+.entry-steps button:disabled { color: var(--muted); }
+.entry-steps button svg { grid-column: 2; color: var(--color-mfg-red); }
+.entry-step-number {
+  display: grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border: 1px solid currentColor;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.entry-panel .entry-stage-title { font-size: clamp(1rem, 2vw, 1.25rem); }
+.entry-fields, .entry-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .9rem;
+}
+.entry-field { display: grid; align-content: start; gap: .35rem; min-width: 0; }
+.entry-wide { grid-column: 1 / -1; }
+.entry-field > label { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .55rem; font-weight: 750; }
+.entry-field-marker { color: var(--muted); font-size: .75rem; font-weight: 600; }
+.entry-field :is(input,textarea) {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: .45rem .65rem;
+  border: 1px solid #7e8996;
+  border-radius: 0;
+  background: white;
+  color: var(--color-mfg-ink);
+  font: inherit;
+}
+.entry-field [aria-invalid="true"] { border-color: var(--color-mfg-red); }
+.entry-field textarea { resize: vertical; }
+.entry-field input[type="file"]::file-selector-button {
+  margin-inline-end: .6rem;
+  padding: .2rem .45rem;
+  border: 1px solid var(--line);
+  background: var(--color-mfg-paper);
+  cursor: pointer;
+}
+.entry-hint { color: var(--muted); font-size: .875rem; }
+.entry-panel #entry-submit-note { margin-top: .65rem; }
+.entry-error { color: #a20c26; font-size: .875rem; font-weight: 750; }
+.entry-file-selection { display: grid; gap: .4rem; justify-items: start; overflow-wrap: anywhere; }
+.entry-file-selection ul { max-width: 100%; }
+.entry-category-info, .entry-notice, .entry-document {
+  padding: .85rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--color-mfg-paper);
+}
+.entry-category-info { display: grid; gap: .45rem; margin-top: 1rem; }
+.entry-category-info h4, .entry-document h4, .entry-summary-section h4 { font-weight: 800; }
+.entry-category-info ul { padding-left: 1.2rem; list-style: disc; }
+.entry-notice { border-left: 3px solid var(--color-mfg-red); }
+.entry-category-info .entry-notice { padding-block: .45rem; background: white; }
+.entry-terms, .entry-summary { display: grid; gap: .9rem; }
+.entry-document { display: grid; align-content: start; gap: .55rem; min-width: 0; background: #f8f9fa; }
+.entry-prefix { display: flex; align-items: stretch; }
+.entry-prefix span { display: grid; place-items: center; min-width: 2.4rem; border: 1px solid #7e8996; border-right: 0; background: var(--color-mfg-paper); font-weight: 800; }
+.entry-summary-section { padding: .85rem; border: 1px solid var(--line); }
+.entry-summary-section header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; margin-bottom: .7rem; }
+.entry-summary-grid > div { min-width: 0; padding: .55rem .7rem; background: var(--color-mfg-paper); }
+.entry-summary-grid dt { font-size: .875rem; font-weight: 750; }
+.entry-summary-grid dd { white-space: pre-wrap; overflow-wrap: anywhere; }
+.entry-panel .action:disabled { color: var(--muted); border-color: var(--line); background: var(--color-mfg-paper); }
+
+@media (max-width: 72rem) {
+  .entry-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 44rem) {
+  .entry-fields, .entry-summary-grid { grid-template-columns: minmax(0, 1fr); }
+  .entry-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.entry-regulation-accepted { display: flex; align-items: center; gap: .4rem; color: #17643b; font-weight: 750; }

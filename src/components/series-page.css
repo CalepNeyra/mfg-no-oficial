@@ -1,0 +1,108 @@
+.series-page { display: grid; min-width: 0; gap: 1.25rem; padding-block: 1.35rem 3.5rem; }
+.series-page .hero[data-variant="series"] { inline-size: 100%; }
+.series-page .hero[data-variant="series"] .hero-slide {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+  isolation: isolate;
+  inline-size: 100%;
+  aspect-ratio: 21 / 9;
+  min-height: 0;
+}
+.series-page .hero[data-variant="series"] .hero-slide > .media-slot {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  aspect-ratio: auto;
+  background-color: #313941;
+}
+.series-page[data-division="freshman-series"] .hero-slide > .media-slot { background-color: #414b57; }
+.series-page .hero[data-variant="series"] .hero-slide::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(0deg, #10141ce8, #10141c48 54%, transparent 85%);
+  content: "";
+}
+.series-page .hero[data-variant="series"] .media-icon {
+  position: absolute;
+  inset-inline-start: 72%;
+  inset-block-start: 25%;
+}
+.series-page .hero[data-variant="series"] .hero-copy {
+  min-height: 0;
+  padding: clamp(1.2rem, 4vw, 3rem);
+}
+.series-page .hero[data-variant="series"] .hero-copy > p { max-width: 44rem; margin: .55rem 0 0; }
+.series-page .hero[data-variant="series"] h2 { font-size: clamp(1.7rem, 4.7vw, 3.6rem); line-height: 1; }
+.series-page .hero[data-variant="series"] .hero-accent { margin-bottom: .65rem; }
+.series-page .hero[data-variant="series"] .slide-progress button { width: clamp(2.15rem, 12vw, 3.5rem); }
+.series-page .hero[data-variant="series"] .carousel-arrows button { width: clamp(2.15rem, 10vw, 3.25rem); }
+.series-page .hero[data-variant="series"] .carousel-toolbar { padding-inline-start: clamp(.3rem, 2vw, 1.5rem); }
+.series-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  padding: 1.2rem 1.35rem;
+  border: 1px solid var(--line);
+  background: white;
+}
+.series-intro .section-heading { margin-bottom: .65rem; }
+.series-intro p { max-width: 75ch; line-height: 1.65; }
+.series-intro > svg { color: var(--color-mfg-red); flex-shrink: 0; }
+.series-facts {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--line);
+  gap: 1px;
+}
+.series-facts > div { padding: .8rem .75rem; background: white; }
+.series-facts dt { color: var(--muted); font-size: .82rem; }
+.series-facts dd { margin-top: .2rem; font-weight: 800; overflow-wrap: anywhere; }
+.series-facts > div:first-child dd { color: var(--color-mfg-red); font-variant-numeric: tabular-nums; }
+.series-sports { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .45rem; }
+.series-sports a {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .65rem .8rem;
+  min-height: 2.85rem;
+  border: 1px solid var(--line);
+  background: white;
+  font-size: .93rem;
+  font-weight: 750;
+}
+.series-sports a:hover { border-color: var(--color-mfg-red); }
+.series-sports a svg { flex-shrink: 0; color: var(--color-mfg-red); }
+.series-content { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.series-panel { min-width: 0; padding: 1rem; border: 1px solid var(--line); background: white; }
+.series-panel .section-heading { margin-bottom: .6rem; }
+.series-panel .section-heading h2 { font-size: clamp(1.4rem, 2.75vw, 2rem); }
+.series-panel .empty-state { min-height: 3.25rem; background: var(--color-mfg-paper); }
+.series-next-race { display: grid; grid-template-columns: minmax(6rem, 35%) 1fr; border: 1px solid var(--line); }
+.series-next-race .media-slot { min-height: 4.5rem; }
+.series-next-race > div:last-child { display: grid; align-content: center; padding: .65rem; }
+.series-next-race time, .series-profiles p { font-size: .87rem; color: var(--muted); }
+.series-entry-content { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; }
+.series-entry-content .empty-state { flex-grow: 1; }
+.standings-scoped { overflow-x: auto; }
+.series-profiles { display: grid; gap: .6rem; }
+.series-profiles li { display: flex; align-items: center; gap: .7rem; border: 1px solid var(--line); padding: .55rem; }
+.series-profiles .media-slot { flex: 0 0 5rem; aspect-ratio: 4/3; }
+.series-back { display: inline-block; margin-bottom: .85rem; }
+@media (max-width: 51rem) {
+  .series-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .series-sports { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 43rem) {
+  .series-content { grid-template-columns: minmax(0, 1fr); }
+  .series-page .hero[data-variant="series"] .hero-slide { min-height: 12rem; }
+  .series-intro > svg { display: none; }
+}
+@media (max-width: 29rem) {
+  .series-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

@@ -1,0 +1,31 @@
+.series-identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .7rem 1rem;
+  padding: .85rem 1.1rem;
+  border: 1px solid var(--line);
+  border-inline-start: 4px solid var(--color-mfg-red);
+  background: white;
+  color: var(--color-mfg-ink);
+}
+.series-identity-mark {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: stretch;
+  background: var(--color-mfg-ink);
+  color: white;
+}
+.series-identity-mark strong {
+  padding: .27rem .48rem .34rem;
+  background: var(--color-mfg-red);
+  font: 800 1.35rem/1 var(--font-display);
+  letter-spacing: -.025em;
+}
+.series-identity-mark > span { display: grid; place-items: center; padding: .1rem .5rem; font-size: .79rem; font-weight: 800; }
+.series-page[data-division="freshman-series"] .series-identity-mark > span { background: var(--color-mfg-steel); }
+.series-identity h1 {
+  font: 800 clamp(1.85rem, 4.8vw, 3.25rem)/.95 var(--font-display);
+  letter-spacing: .015em;
+  text-transform: uppercase;
+}

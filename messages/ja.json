@@ -1,0 +1,730 @@
+{
+  "common": {
+    "skip": "本文へスキップ",
+    "home": "ホーム",
+    "breadcrumb": "パンくずリスト",
+    "backHome": "ホームに戻る",
+    "brandHome": "MFG ホーム",
+    "notFoundTitle": "ページが見つかりません",
+    "notFoundBody": "指定されたURLのページはありません。",
+    "errorTitle": "ページを読み込めませんでした",
+    "errorBody": "もう一度お試しいただくか、ホームへお戻りください。",
+    "retry": "再試行"
+  },
+  "nav": {
+    "primary": "メインナビゲーション",
+    "menu": "メニュー",
+    "series": "シリーズ",
+    "information": "インフォメーション",
+    "competition": "競技情報",
+    "language": "言語",
+    "staff": "スタッフログイン",
+    "registration": "エントリー",
+    "ja": "日本語",
+    "en": "英語",
+    "es": "スペイン語"
+  },
+  "footer": {
+    "label": "フッター",
+    "contact": "お問い合わせ先は公開準備中です。",
+    "notice": "『MF Ghost』と『Subaru and Subaru』に着想を得た、独立した非公式プロジェクトです。",
+    "championships": "選手権",
+    "participation": "参加案内",
+    "organization": "運営情報",
+    "backToTop": "ページ上部に戻る",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "year": "MFG Motorsport · {year}"
+  },
+  "home": {
+    "metaTitle": "MFG モータースポーツポータル",
+    "metaDescription": "『MF Ghost』と『Subaru and Subaru』に着想を得た独立系モータースポーツポータルです。",
+    "calendarTitle": "レースカレンダー",
+    "calendarLink": "全日程を見る",
+    "seriesTitle": "MFG シリーズ",
+    "newsTitle": "最新ニュース",
+    "newsLink": "ニュース一覧",
+    "standingsLink": "ランキングを見る"
+  },
+  "hero": {
+    "region": "競技ハイライト",
+    "carousel": "カルーセル",
+    "slides": "スライド",
+    "pause": "自動再生を一時停止",
+    "play": "自動再生を再開",
+    "previous": "前のスライド",
+    "next": "次のスライド",
+    "calendar": {
+      "description": "日本のモータースポーツに着想を得たMFG。選手権と競技コンセプトを紹介します。",
+      "action": "MFGを知る"
+    },
+    "super-series": {
+      "description": "トップカテゴリーの日程、レース結果、ランキングをご覧いただけます。",
+      "action": "Super Seriesを見る"
+    },
+    "freshman-series": {
+      "description": "第2カテゴリーの日程、レース結果、ランキングをご覧いただけます。",
+      "action": "Freshman Seriesを見る"
+    },
+    "registration": {
+      "title": "参加・エントリー案内",
+      "description": "各選手権の規則、参加要件、エントリー受付状況をご確認ください。",
+      "action": "ドライバーエントリー"
+    }
+  },
+  "divisions": {
+    "super-series": {
+      "title": "Super Series",
+      "level": "トップカテゴリー",
+      "description": "トップカテゴリーの日程、結果、ランキングを公開次第ご案内します。"
+    },
+    "freshman-series": {
+      "title": "Freshman Series",
+      "level": "第2カテゴリー",
+      "description": "第2カテゴリーの日程、結果、ランキングを公開次第ご案内します。"
+    }
+  },
+  "sections": {
+    "drivers": {
+      "title": "ドライバー",
+      "description": "両カテゴリーのドライバー一覧です。",
+      "empty": "ドライバープロフィールはまだ公開されていません。"
+    },
+    "cars": {
+      "title": "車両",
+      "description": "ポータルに掲載される車両情報です。",
+      "empty": "車両情報はまだ公開されていません。"
+    },
+    "calendar": {
+      "title": "カレンダー",
+      "description": "レースの開催日、会場、スケジュールです。",
+      "empty": "開催が発表されたレースはありません。",
+      "link": "日程を見る"
+    },
+    "standings": {
+      "title": "ランキング",
+      "description": "各カテゴリーの順位とポイントです。",
+      "empty": "順位とポイントはまだ公開されていません。",
+      "link": "ランキングを見る"
+    },
+    "results": {
+      "title": "レース結果",
+      "description": "レース・カテゴリー別の最終結果です。",
+      "empty": "レース結果はまだ公開されていません。",
+      "link": "結果を見る"
+    },
+    "entry-list": {
+      "title": "エントリーリスト",
+      "description": "レース・カテゴリー別の登録選手一覧です。",
+      "empty": "エントリーリストはまだ公開されていません。",
+      "link": "エントリーリストを見る"
+    },
+    "regulations": {
+      "title": "規則",
+      "description": "競技規則および技術規則の資料です。",
+      "empty": "規則書はまだ公開されていません。"
+    },
+    "news": {
+      "title": "ニュース",
+      "description": "MFGポータルからの最新情報とお知らせです。",
+      "empty": "ニュースはまだ公開されていません。"
+    }
+  },
+  "calendar": {
+    "filter": "シリーズでレースを絞り込む",
+    "all": "すべて",
+    "pending": "日程未発表",
+    "round": "第{round}戦・{series}"
+  },
+  "standings": {
+    "tabs": "カテゴリー別ランキング",
+    "table": "{series} ランキング",
+    "position": "順位",
+    "number": "車両番号",
+    "driver": "ドライバー",
+    "car": "車両",
+    "points": "ポイント",
+    "portrait": "写真",
+    "nationality": "国籍"
+  },
+  "entry": {
+    "title": "ドライバーエントリー",
+    "description": "参加カテゴリーを選択し、エントリー申請を準備します。",
+    "application": "エントリー申請",
+    "localDraft": "下書きはこのページ内に一時的に保持されます。現在は、実際の個人情報の入力や書類の選択を行わないでください。",
+    "progress": "エントリーの手順",
+    "completed": "完了",
+    "stepCount": "全{total}ステップ中の{step}",
+    "steps": {
+      "category": "カテゴリー・シーズン・規則",
+      "driver": "ドライバー",
+      "vehicle": "車両",
+      "number": "車両番号",
+      "review": "確認・送信"
+    },
+    "required": "必須",
+    "optional": "任意",
+    "select": "選択してください",
+    "requirementsTitle": "参加要件",
+    "requirementsBody": "参加要件はまだ公開されていません。",
+    "regulationsLink": "規則を見る",
+    "regulationsPending": "{series} の規則書はまだ公開されていません。",
+    "opening": "受付状況",
+    "openingStatus": {
+      "open": "受付中",
+      "closed": "受付終了",
+      "pending": "未発表"
+    },
+    "noSeasons": "このカテゴリーのシーズンはまだ公開されていません。",
+    "documents": {
+      "sporting": "競技規則",
+      "technical": "技術規則",
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "revision": "バージョン {revision}"
+    },
+    "fields": {
+      "category": "カテゴリー",
+      "seasonId": "シーズン",
+      "firstName": "名",
+      "lastName": "姓",
+      "birthDate": "生年月日",
+      "nationality": "国籍",
+      "residence": "居住国",
+      "email": "メールアドレス",
+      "phoneCode": "国際電話の国番号",
+      "phone": "電話番号",
+      "driverPhoto": "ドライバーの顔写真",
+      "driverLicense": "運転免許証",
+      "experience": "競技経験",
+      "previousMfg": "MFGへの過去の出場歴",
+      "team": "チームまたは代理人",
+      "make": "メーカー",
+      "model": "車種",
+      "version": "グレード・仕様",
+      "year": "製造年",
+      "chassis": "車台型式",
+      "engine": "エンジン型式",
+      "displacement": "排気量（cc）",
+      "aspiration": "吸気方式",
+      "power": "最高出力（PS）",
+      "weight": "重量（kg）",
+      "transmission": "変速機の種類",
+      "gears": "変速段数",
+      "drivetrain": "駆動方式",
+      "modifications": "技術的な改造内容",
+      "vehiclePhotos": "車両写真",
+      "raceNumber": "希望車両番号"
+    },
+    "photoHint": "JPG、PNG、WebP。1ファイルにつき10 MBまで。",
+    "licenseHint": "PDF、JPG、PNG、WebP。10 MBまで。",
+    "removeFiles": "選択を解除",
+    "validation": {
+      "required": "この欄を入力してください。",
+      "length": "入力できる文字数を超えています。",
+      "category": "カテゴリーを選択してください。",
+      "season": "このカテゴリーで公開済みのシーズンを選択してください。",
+      "birthDate": "未来の日付ではない有効な生年月日を入力してください。",
+      "email": "有効なメールアドレスを入力してください。",
+      "phoneCode": "「+」に続けて3桁以内の国番号を入力してください。",
+      "phone": "数字、空白、ハイフン、括弧を使って有効な電話番号を入力してください。",
+      "year": "西暦を4桁で入力してください。",
+      "integer": "正の整数を入力してください。",
+      "positive": "0より大きい数を入力してください。",
+      "digits": "車両番号は数字のみ入力してください。",
+      "numberLength": "このカテゴリーとシーズンの規定桁数を超えています。",
+      "fileType": "対応するファイル形式を選択してください。",
+      "fileSize": "空のファイルは使用できません。上限は10 MBです。",
+      "fileCount": "ファイルを1つだけ選択してください。"
+    },
+    "numberRulesTitle": "車両番号の規則",
+    "numberRulesPending": "このカテゴリーとシーズンの車両番号規則はまだ公開されていません。",
+    "prefix": "規則により接頭辞は {prefix} です。数字のみ入力してください。",
+    "numberPreview": "希望車両番号 {number}・{season}",
+    "availabilityPending": "空き状況は未確認です。車両番号の割り当てや予約は行われていません。",
+    "review": {
+      "category": "カテゴリー・シーズン",
+      "driver": "ドライバー情報",
+      "vehicle": "車両情報",
+      "number": "希望車両番号",
+      "documents": "選択した書類",
+      "terms": "規則・同意事項",
+      "acceptRegulations": "規則への同意",
+      "acceptPrivacy": "プライバシーポリシーへの同意"
+    },
+    "accepted": "同意済み",
+    "notEntered": "未入力",
+    "edit": "編集",
+    "editSection": "{section}を編集",
+    "back": "戻る",
+    "next": "次へ",
+    "send": "エントリー申請を送信",
+    "submissionLocked": "安全に申請を受け付けるシステムが整い次第、送信が可能になります。",
+    "statusTitle": "申請状況",
+    "statusPending": "受付開始後に申請状況を確認できるようになります。",
+    "draftReviewed": "下書きの確認が完了しました。申請はまだ送信されていません。"
+  },
+  "staff": {
+    "title": "スタッフログイン",
+    "description": "MFGの権限を持つスタッフ専用です。",
+    "unavailable": "ログイン機能は準備中です。認証情報は入力しないでください。",
+    "email": "スタッフ用メールアドレス",
+    "password": "パスワード",
+    "signIn": "ログイン",
+    "modulesLink": "管理機能の予定を見る"
+  },
+  "admin": {
+    "title": "管理パネル",
+    "description": "MFGの競技運営に向けた管理機能の一覧です。",
+    "locked": "スタッフ認証の設定が完了するまで管理機能は利用できません。",
+    "modules": "管理モジュール",
+    "numbers": "車両番号",
+    "seasons": "シーズン",
+    "races": "レース"
+  },
+  "select": {
+    "search": "選択肢を検索",
+    "noResults": "一致する選択肢がありません。",
+    "useCustom": "「{value}」を使用",
+    "technical": {
+      "aspiration": {
+        "natural": "自然吸気",
+        "turbo": "ターボ",
+        "supercharged": "スーパーチャージャー",
+        "combined": "複合過給"
+      },
+      "transmission": {
+        "manual": "マニュアル",
+        "automatic": "オートマチック",
+        "sequential": "シーケンシャル",
+        "dualClutch": "デュアルクラッチ",
+        "cvt": "無段変速機（CVT）"
+      },
+      "drivetrain": {
+        "front": "前輪駆動（FWD）",
+        "rear": "後輪駆動（RWD）",
+        "allWheel": "全輪駆動（AWD）",
+        "fourWheel": "四輪駆動（4WD）"
+      }
+    }
+  },
+  "regulation": {
+    "title": "MFG {series} 規則",
+    "description": "競技規則、技術規則および参加条件。",
+    "directory": "規則一覧",
+    "view": "規則を見る",
+    "contents": "目次",
+    "articleNavigation": "条項間の移動",
+    "version": "規則の版",
+    "pending": "公開準備中",
+    "contentPending": "内容はまだ公開されていません。",
+    "unpublished": "選択したシーズンの規則または参加条件はまだ公開されていません。",
+    "acceptanceRequired": "続行するには規則を確認し、同意してください。",
+    "accepted": "規則に同意済み",
+    "acceptanceTitle": "規則への同意",
+    "declaration": "MFG {series} の規則および参加条件を読み、理解し、同意することを確認します。",
+    "privacyConsent": "プライバシーポリシーに同意します。",
+    "acceptReturn": "同意してエントリーに戻る",
+    "backToEntry": "エントリーに戻る",
+    "stale": "選択内容または版が変わりました。エントリーに戻って現行規則を確認してください。",
+    "openDocument": "文書を新しいタブで開く",
+    "articles": {
+      "general": "一般規定",
+      "sporting": "競技規則",
+      "technical": "技術規則",
+      "requirements": "参加要件",
+      "numbers": "車両番号の割り当て",
+      "sanctions": "違反と罰則",
+      "terms": "利用規約"
+    }
+  },
+  "seriesPage": {
+    "about": "選手権について",
+    "carousel": "{series} カルーセル",
+    "factsLabel": "選手権データ",
+    "pending": "未確定",
+    "facts": {
+      "division": "ディビジョン",
+      "rounds": "ラウンド数",
+      "finalists": "決勝進出者数",
+      "power": "出力制限",
+      "season": "現行シーズン",
+      "registration": "エントリー受付状況"
+    },
+    "sports": "選手権ナビゲーション",
+    "latestNews": "最新ニュース",
+    "nextRace": "次戦",
+    "featuredDrivers": "注目ドライバー",
+    "championshipStandings": "選手権ランキング",
+    "participatingCars": "参戦車両",
+    "regulatoryInformation": "規則情報",
+    "viewDrivers": "ドライバーを見る",
+    "viewCars": "車両を見る",
+    "version": "公開版 {version}。",
+    "entryStatus": "{series}・{status}",
+    "openRegistration": "エントリーフォームへ",
+    "back": "{series} に戻る",
+    "super-series": {
+      "introduction": "MFG Super Seriesは、MFGの最上位カテゴリーです。ドライバーと高性能車両が日本の道路を舞台に競い合い、ドライビング技術、戦略、出力とグリップのバランスが重要な役割を果たします。",
+      "slides": {
+        "overview": {
+          "title": "MFGの最上位カテゴリー",
+          "description": "日本の道路を舞台に、ドライバーと高性能車両が競い合います。"
+        },
+        "skill": {
+          "title": "技術と戦略",
+          "description": "出力とグリップのバランスも、競技の重要な要素です。"
+        },
+        "grid": {
+          "title": "Super Seriesの参戦車両とドライバー",
+          "description": "ドライバーと車両のプロフィールを公開次第ご案内します。"
+        },
+        "participation": {
+          "title": "Super Seriesの規則",
+          "description": "カテゴリーの競技規則と技術規則を公開次第ご確認いただけます。"
+        }
+      }
+    },
+    "freshman-series": {
+      "introduction": "MFG Freshman Seriesは、新たなドライバーのMFG参戦を後押しするカテゴリーです。競技を通じて組織内の新たな才能が成長できる環境を提供することを目指しています。",
+      "slides": {
+        "overview": {
+          "title": "MFGへの第一歩",
+          "description": "MFGの競技に新たに参加するドライバーのためのカテゴリーです。"
+        },
+        "skill": {
+          "title": "競技を通じた成長",
+          "description": "競い合う環境の中で、新たな才能の成長を支えます。"
+        },
+        "grid": {
+          "title": "Freshman Seriesの参戦車両とドライバー",
+          "description": "参戦ドライバーと車両の最新情報をご案内します。"
+        },
+        "participation": {
+          "title": "Freshman Seriesへの参加",
+          "description": "エントリーの受付状況とカテゴリーの規則をご確認ください。"
+        }
+      }
+    }
+  },
+  "front": {
+    "shortcuts": "このページの項目",
+    "eventDetails": "大会情報",
+    "championships": "MFG選手権",
+    "aboutTitle": "MFGについて",
+    "aboutIntro": "MFG Motorsportは、『MF Ghost』と『Subaru and Subaru』に着想を得た独立系ポータルです。ドライビング技術や戦略、パワーとグリップのバランスに焦点を当て、スーパーシリーズとフレッシュマンシリーズの2つの選手権を紹介します。",
+    "aboutLink": "MFGを知る",
+    "explore": "選手権を見る",
+    "driverProfile": "ドライバー情報を見る",
+    "carProfile": "車両諸元を見る",
+    "results": "最新リザルト",
+    "participation": "レースに参加しませんか？",
+    "gallery": "メディアギャラリー",
+    "galleryEmpty": "公開された写真や動画はまだありません。",
+    "partners": "スポンサー・パートナー",
+    "partnersEmpty": "スポンサーやパートナーの発表はまだありません。",
+    "footerAbout": "MFG Motorsportの独立系ポータル。選手権、大会情報、参加案内を掲載します。",
+    "policyPending": "この文書はまだ公開されていません。",
+    "countdown": {
+      "label": "次戦までのカウントダウン",
+      "days": "日",
+      "hours": "時間",
+      "minutes": "分",
+      "seconds": "秒"
+    },
+    "raceStatus": {
+      "upcoming": "開催予定",
+      "live": "開催中",
+      "finished": "終了"
+    },
+    "mediaKind": {
+      "races": "レース",
+      "cars": "車両",
+      "drivers": "ドライバー",
+      "qualifying": "予選",
+      "events": "MFGイベント"
+    },
+    "info": {
+      "about": {
+        "title": "MFGについて",
+        "description": "MFGの競技コンセプトと2つの選手権を紹介します。"
+      },
+      "contact": {
+        "title": "お問い合わせ",
+        "description": "MFGポータルの連絡窓口です。"
+      },
+      "privacy": {
+        "title": "プライバシーポリシー",
+        "description": "ポータルのプライバシーに関する情報です。"
+      },
+      "terms": {
+        "title": "利用規約",
+        "description": "ポータルの利用条件です。"
+      },
+      "faq": {
+        "title": "よくある質問",
+        "description": "大会の観戦やエントリーに関する情報をご案内します。"
+      }
+    }
+  },
+  "schedule": {
+    "title": "競技カレンダー",
+    "intro": "MFGスーパーシリーズとMFGフレッシュマンシリーズの開催日程、競技プログラム、開始時刻を確認できます。",
+    "filters": "競技フィルター",
+    "season": "シーズン",
+    "allSeasons": "すべてのシーズン",
+    "division": "カテゴリー",
+    "allDivisions": "すべてのカテゴリー",
+    "eventStatus": "開催状況",
+    "allStatuses": "すべての開催状況",
+    "timeZone": "タイムゾーン",
+    "japan": "日本時間（JST、UTC+9）",
+    "local": "現地時間",
+    "view": "カレンダー表示",
+    "list": "一覧",
+    "month": "月間",
+    "next": "次戦",
+    "noNext": "この条件で開催予定のレースはありません。",
+    "rounds": "選手権ラウンド",
+    "empty": "この条件で公開されているイベントはありません。",
+    "round": "第{round}戦",
+    "datePending": "日程未定",
+    "details": "大会情報",
+    "previousMonth": "前の月",
+    "nextMonth": "次の月",
+    "currentMonth": "今月",
+    "legend": "カテゴリーの凡例",
+    "monthEvent": "{title}・{date}",
+    "preview": "開発用プレビューです。表示されている大会はテストデータで、公式情報ではありません。",
+    "back": "カレンダーに戻る",
+    "seasonLabel": "{season}シーズン",
+    "add": "マイカレンダーに追加",
+    "download": ".icsファイルをダウンロード",
+    "importHint": ".icsファイルをOutlookまたはAppleカレンダーにインポートできます。",
+    "courseTitle": "コース情報",
+    "length": "全長",
+    "layout": "コース種別",
+    "elevation": "高低差",
+    "map": "コースマップ",
+    "courseEmpty": "コース情報はまだ公開されていません。",
+    "program": "競技プログラム",
+    "programEmpty": "競技プログラムはまだ公開されていません。",
+    "sport": "競技情報",
+    "sportEmpty": "競技資料はまだ公開されていません。",
+    "gallery": "メディアギャラリー",
+    "status": {
+      "pending": "確認待ち",
+      "scheduled": "開催予定",
+      "qualifying": "予選実施中",
+      "racing": "決勝実施中",
+      "finished": "終了",
+      "postponed": "延期",
+      "cancelled": "中止"
+    },
+    "session": {
+      "qualifying": "予選",
+      "race": "決勝レース",
+      "other": "追加プログラム"
+    },
+    "resource": {
+      "entries": "エントリーリスト",
+      "qualifyingResults": "予選結果",
+      "grid": "スターティンググリッド",
+      "raceResults": "決勝結果",
+      "news": "関連ニュース",
+      "broadcast": "ライブ配信"
+    }
+  },
+  "championship": {
+    "title": "競技ランキング",
+    "intro": "MFG各カテゴリーの選手権順位、予選タイム、ラウンド別結果を確認できます。",
+    "preview": "開発用プレビューです。ドライバー、タイム、ポイントはテストデータです。",
+    "division": "カテゴリー",
+    "season": "シーズン",
+    "noSeason": "公開済みシーズンなし",
+    "round": "ラウンド",
+    "roundLabel": "第{round}戦",
+    "latestRound": "最新ラウンド",
+    "allRounds": "全ラウンド",
+    "search": "検索",
+    "searchHint": "ドライバー、ゼッケン、メーカー、車両",
+    "tabs": "ランキング表示",
+    "empty": "この条件のデータはまだ公開されていません。",
+    "noMatches": "条件に該当するドライバーはいません。",
+    "rules": "ポイント規則",
+    "updated": "更新日時 {date} · JST",
+    "revision": "規則 {version}",
+    "noPrevious": "前戦の順位は未公開",
+    "gain": "{count}順位上昇",
+    "loss": "{count}順位下降",
+    "steady": "順位変動なし",
+    "leaders": "選手権上位",
+    "bib": "ゼッケン {number}",
+    "ghost": "ゴーストレコード・基準タイム {time}",
+    "gridNote": "公開済みのスターティンググリッドです。予選後の変更が反映される場合があります。",
+    "provisionalNote": "タイムによる選出です。審議やペナルティにより最終グリッドが変わる場合があります。",
+    "timedSelection": "タイムによる選出",
+    "startingGrid": "スターティンググリッド",
+    "compare": "比較対象",
+    "noComparison": "比較なし",
+    "metricLabel": "指標",
+    "csv": "CSVをダウンロード",
+    "pdf": "印刷・PDF保存",
+    "roundResults": "ラウンド結果",
+    "eventInfo": "大会情報",
+    "tab": {
+      "general": "総合順位",
+      "qualifying": "タイム予選",
+      "finalists": "決勝進出者",
+      "points": "ラウンド別ポイント",
+      "statistics": "統計"
+    },
+    "publication": {
+      "pending": "公開待ち",
+      "provisional": "暫定",
+      "review": "審議中",
+      "final": "確定",
+      "corrected": "訂正済み"
+    },
+    "field": {
+      "pos": "順位",
+      "driver": "ドライバー",
+      "change": "順位変動",
+      "number": "ゼッケン",
+      "country": "国籍",
+      "vehicle": "車両",
+      "rounds": "出場ラウンド",
+      "wins": "優勝",
+      "podiums": "表彰台",
+      "points": "ポイント",
+      "gap": "首位との差",
+      "best": "ベストタイム",
+      "leaderGap": "首位との差",
+      "previousGap": "直前との差",
+      "day": "予選日",
+      "zone": "予選状況",
+      "deduction": "減点",
+      "outcome": "出場状況"
+    },
+    "short": {
+      "pos": "順位",
+      "driver": "ドライバー",
+      "change": "変動",
+      "number": "車番",
+      "country": "国籍",
+      "vehicle": "車両",
+      "rounds": "出場",
+      "wins": "優勝",
+      "podiums": "表彰台",
+      "points": "得点",
+      "gap": "首位差"
+    },
+    "outcome": {
+      "participated": "出場",
+      "absent": "欠場",
+      "retired": "リタイア",
+      "disqualified": "失格"
+    },
+    "zone": {
+      "final": "決勝進出",
+      "points": "ポイント圏内",
+      "outside": "ポイント圏外"
+    },
+    "metric": {
+      "points": "ポイント推移",
+      "position": "順位推移",
+      "gap": "首位とのポイント差",
+      "qualifying": "予選成績",
+      "wins": "優勝",
+      "podiums": "表彰台",
+      "poles": "ポールポジション",
+      "finals": "決勝出場",
+      "comparisonGap": "ドライバー間のポイント差"
+    }
+  },
+  "information": {
+    "circuits": "コース",
+    "circuitsIntro": "大会コースの所在地、レイアウト、開催履歴を確認できます。",
+    "circuitsEmpty": "公式コース情報はまだ掲載されていません。",
+    "profile": "ドライバー情報を見る",
+    "circuitDetails": "コース詳細を見る",
+    "noMatches": "条件に該当する情報はありません。",
+    "driverSearch": "名前またはゼッケン",
+    "backDrivers": "ドライバー一覧に戻る",
+    "backCircuits": "コース一覧に戻る",
+    "engine": "エンジン",
+    "power": "出力",
+    "weight": "重量",
+    "drivetrain": "駆動方式",
+    "transmission": "トランスミッション",
+    "vehicle": "車両諸元",
+    "vehiclePending": "車両諸元はまだ公開されていません。",
+    "history": "競技履歴",
+    "historyPending": "公開された結果はまだありません。",
+    "finish": "{position}位",
+    "points": "{value}ポイント",
+    "sectors": "コースのセクター",
+    "circuitHistory": "大会開催履歴",
+    "origins": "成り立ちと目的",
+    "originsText": "『MF Ghost』と『Subaru and Subaru』に描かれる架空の競技から着想を得た独立系ポータルです。カテゴリー、日程、参加案内をまとめています。",
+    "structure": "競技の構成",
+    "structureText": "このプロジェクトでは、独自の競技情報、カレンダー、ランキングを持つ2つのカテゴリーを紹介します。競技データや資料は公開に合わせて掲載します。",
+    "documentsPending": "資料は公開待ちです",
+    "conduct": "行動規範",
+    "notices": "通達・規則改定",
+    "faq": {
+      "general": {
+        "category": "一般情報",
+        "question": "MFG Motorsportとは何ですか？",
+        "answer": "『MF Ghost』と『Subaru and Subaru』に着想を得た独立系ポータルです。プロジェクトと競技の情報を掲載しています。"
+      },
+      "championships": {
+        "category": "選手権",
+        "question": "どのカテゴリーがありますか？",
+        "answer": "スーパーシリーズとフレッシュマンシリーズには、それぞれ専用ページと競技情報があります。"
+      },
+      "registration": {
+        "category": "エントリー",
+        "question": "エントリー情報はどこで見られますか？",
+        "answer": "エントリーページでカテゴリーと受付状況を確認できます。正式な申請の送信は受付機能の準備が整い次第、有効になります。"
+      },
+      "requirements": {
+        "category": "参加要件",
+        "question": "参加要件はどこで公開されますか？",
+        "answer": "公開後は、エントリーページと該当カテゴリーの規則で確認できます。"
+      },
+      "technical": {
+        "category": "車両と技術規則",
+        "question": "車両と技術規則はどこで確認できますか？",
+        "answer": "車両は公開ドライバー情報に掲載されます。技術規則は各カテゴリーの規則をご確認ください。"
+      },
+      "calendar": {
+        "category": "カレンダーと大会",
+        "question": "開催日や開始時刻はどこで確認できますか？",
+        "answer": "公開された大会をカレンダーに掲載します。開始時刻は日本時間と現地時間で確認できます。"
+      }
+    },
+    "contact": {
+      "general": {
+        "title": "一般のお問い合わせ",
+        "body": "ポータルの概要と、よくある質問をご確認ください。"
+      },
+      "sport": {
+        "title": "競技に関するお問い合わせ",
+        "body": "公開された大会と競技日程をご確認ください。"
+      },
+      "registration": {
+        "title": "エントリーに関するお問い合わせ",
+        "body": "申請手順、参加要件、各カテゴリーの受付状況をご確認ください。"
+      },
+      "technical": {
+        "title": "技術に関するお問い合わせ",
+        "body": "各カテゴリーの競技規則と技術資料をご確認ください。"
+      },
+      "media": {
+        "title": "報道・広報",
+        "body": "ポータルからのお知らせと公開記事をご覧ください。"
+      }
+    }
+  }
+}

@@ -1,0 +1,730 @@
+{
+  "common": {
+    "skip": "Saltar al contenido",
+    "home": "Inicio",
+    "breadcrumb": "Ruta de navegación",
+    "backHome": "Volver al inicio",
+    "brandHome": "MFG, inicio",
+    "notFoundTitle": "Página no encontrada",
+    "notFoundBody": "La dirección solicitada no corresponde a una sección del portal.",
+    "errorTitle": "No pudimos cargar esta página",
+    "errorBody": "Inténtalo de nuevo o vuelve al inicio.",
+    "retry": "Reintentar"
+  },
+  "nav": {
+    "primary": "Principal",
+    "menu": "Menú",
+    "series": "Series",
+    "information": "Información",
+    "competition": "Competición",
+    "language": "Idioma",
+    "staff": "Acceso del personal",
+    "registration": "Inscripciones",
+    "ja": "Japonés",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "footer": {
+    "label": "Pie de página",
+    "contact": "Contacto pendiente de publicación.",
+    "notice": "Proyecto independiente y no oficial inspirado en MF Ghost y Subaru and Subaru.",
+    "championships": "Campeonatos",
+    "participation": "Participación",
+    "organization": "Organización",
+    "backToTop": "Volver arriba",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "year": "MFG Motorsport · {year}"
+  },
+  "home": {
+    "metaTitle": "MFG · Portal deportivo",
+    "metaDescription": "Portal deportivo independiente inspirado en MF Ghost y Subaru and Subaru.",
+    "calendarTitle": "Calendario de competición",
+    "calendarLink": "Calendario completo",
+    "seriesTitle": "Series MFG",
+    "newsTitle": "Últimas noticias",
+    "newsLink": "Todas las noticias",
+    "standingsLink": "Ver clasificación"
+  },
+  "hero": {
+    "region": "Portada de competición",
+    "carousel": "carrusel",
+    "slides": "Diapositivas",
+    "pause": "Pausar reproducción",
+    "play": "Reanudar reproducción",
+    "previous": "Diapositiva anterior",
+    "next": "Diapositiva siguiente",
+    "calendar": {
+      "description": "Automovilismo inspirado en Japón. Conoce los campeonatos y el concepto deportivo de MFG.",
+      "action": "Conoce MFG"
+    },
+    "super-series": {
+      "description": "Calendario, resultados y clasificación de la primera división.",
+      "action": "Ver Super Series"
+    },
+    "freshman-series": {
+      "description": "Calendario, resultados y clasificación de la segunda división.",
+      "action": "Ver Freshman Series"
+    },
+    "registration": {
+      "title": "Participación e inscripciones",
+      "description": "Consulta los reglamentos, requisitos y estado de las inscripciones de cada campeonato.",
+      "action": "Inscripciones de pilotos"
+    }
+  },
+  "divisions": {
+    "super-series": {
+      "title": "Super Series",
+      "level": "Primera división",
+      "description": "Consulta el calendario, los resultados y la clasificación de la primera división cuando se publiquen."
+    },
+    "freshman-series": {
+      "title": "Freshman Series",
+      "level": "Segunda división",
+      "description": "Consulta el calendario, los resultados y la clasificación de la segunda división cuando se publiquen."
+    }
+  },
+  "sections": {
+    "drivers": {
+      "title": "Pilotos",
+      "description": "Directorio de participantes de ambas divisiones.",
+      "empty": "Aún no hay fichas de pilotos publicadas."
+    },
+    "cars": {
+      "title": "Vehículos",
+      "description": "Fichas de los vehículos que figuren en el portal.",
+      "empty": "Aún no hay fichas de vehículos publicadas."
+    },
+    "calendar": {
+      "title": "Calendario",
+      "description": "Fechas, sedes y horarios de las carreras.",
+      "empty": "No hay carreras anunciadas en el portal.",
+      "link": "Ver calendario"
+    },
+    "standings": {
+      "title": "Clasificación",
+      "description": "Posiciones y puntos de cada división.",
+      "empty": "Todavía no hay posiciones ni puntos publicados.",
+      "link": "Ver clasificación"
+    },
+    "results": {
+      "title": "Resultados",
+      "description": "Clasificaciones finales por carrera y división.",
+      "empty": "Aún no hay resultados publicados.",
+      "link": "Ver resultados"
+    },
+    "entry-list": {
+      "title": "Lista de inscritos",
+      "description": "Participantes inscritos por carrera y división.",
+      "empty": "Aún no hay listas de inscritos publicadas.",
+      "link": "Ver lista de inscritos"
+    },
+    "regulations": {
+      "title": "Reglamentos",
+      "description": "Documentación deportiva y técnica de referencia.",
+      "empty": "Aún no hay documentos publicados."
+    },
+    "news": {
+      "title": "Noticias",
+      "description": "Novedades y avisos editoriales del portal MFG.",
+      "empty": "Todavía no hay noticias publicadas."
+    }
+  },
+  "calendar": {
+    "filter": "Filtrar carreras por serie",
+    "all": "Todas",
+    "pending": "Fechas pendientes",
+    "round": "Ronda {round} · {series}"
+  },
+  "standings": {
+    "tabs": "División de la clasificación",
+    "table": "Clasificación de {series}",
+    "position": "Pos.",
+    "number": "Dorsal",
+    "driver": "Piloto",
+    "car": "Vehículo",
+    "points": "Puntos",
+    "portrait": "Foto",
+    "nationality": "Nacionalidad"
+  },
+  "entry": {
+    "title": "Inscripciones de pilotos",
+    "description": "Selecciona tu categoría y prepara la solicitud de inscripción.",
+    "application": "Solicitud de inscripción",
+    "localDraft": "El borrador se conserva temporalmente en esta página. Por ahora, no introduzcas datos personales reales ni selecciones documentos reales.",
+    "progress": "Etapas de la inscripción",
+    "completed": "Etapa completada",
+    "stepCount": "Etapa {step} de {total}",
+    "steps": {
+      "category": "Categoría, temporada y reglamento",
+      "driver": "Piloto",
+      "vehicle": "Vehículo",
+      "number": "Dorsal",
+      "review": "Revisión y envío"
+    },
+    "required": "Obligatorio",
+    "optional": "Opcional",
+    "select": "Selecciona una opción",
+    "requirementsTitle": "Requisitos de participación",
+    "requirementsBody": "Los requisitos de participación aún no se han publicado.",
+    "regulationsLink": "Consultar reglamentos",
+    "regulationsPending": "Aún no se ha publicado un reglamento para {series}.",
+    "opening": "Estado de inscripciones",
+    "openingStatus": {
+      "open": "Abiertas",
+      "closed": "Cerradas",
+      "pending": "Pendiente de publicación"
+    },
+    "noSeasons": "No hay temporadas publicadas para esta categoría.",
+    "documents": {
+      "sporting": "Reglamento deportivo",
+      "technical": "Reglamento técnico",
+      "terms": "Términos y condiciones",
+      "privacy": "Política de privacidad",
+      "revision": "Versión {revision}"
+    },
+    "fields": {
+      "category": "Categoría",
+      "seasonId": "Temporada",
+      "firstName": "Nombres",
+      "lastName": "Apellidos",
+      "birthDate": "Fecha de nacimiento",
+      "nationality": "Nacionalidad",
+      "residence": "País de residencia",
+      "email": "Correo electrónico",
+      "phoneCode": "Código telefónico internacional",
+      "phone": "Número de teléfono",
+      "driverPhoto": "Fotografía del piloto",
+      "driverLicense": "Licencia de conducción",
+      "experience": "Experiencia deportiva",
+      "previousMfg": "Participaciones anteriores en MFG",
+      "team": "Equipo o representante",
+      "make": "Fabricante",
+      "model": "Modelo",
+      "version": "Versión",
+      "year": "Año de fabricación",
+      "chassis": "Código de chasis",
+      "engine": "Código de motor",
+      "displacement": "Cilindrada (cc)",
+      "aspiration": "Tipo de aspiración",
+      "power": "Potencia máxima (PS)",
+      "weight": "Peso (kg)",
+      "transmission": "Tipo de transmisión",
+      "gears": "Número de marchas",
+      "drivetrain": "Configuración de tracción",
+      "modifications": "Modificaciones técnicas",
+      "vehiclePhotos": "Fotografías del vehículo",
+      "raceNumber": "Dorsal solicitado"
+    },
+    "photoHint": "JPG, PNG o WebP. Hasta 10 MB por archivo.",
+    "licenseHint": "PDF, JPG, PNG o WebP. Hasta 10 MB.",
+    "removeFiles": "Quitar selección",
+    "validation": {
+      "required": "Completa este campo.",
+      "length": "El texto supera la longitud permitida.",
+      "category": "Selecciona una categoría.",
+      "season": "Selecciona una temporada publicada para esta categoría.",
+      "birthDate": "Introduce una fecha de nacimiento válida que no sea futura.",
+      "email": "Introduce un correo electrónico válido.",
+      "phoneCode": "Introduce el código con + seguido de hasta tres dígitos.",
+      "phone": "Introduce un teléfono válido con dígitos, espacios, guiones o paréntesis.",
+      "year": "Introduce un año de cuatro dígitos.",
+      "integer": "Introduce un número entero positivo.",
+      "positive": "Introduce un número superior a cero.",
+      "digits": "Introduce solo los dígitos del dorsal.",
+      "numberLength": "El dorsal excede la longitud publicada para esta categoría y temporada.",
+      "fileType": "Selecciona un archivo de un tipo admitido.",
+      "fileSize": "El archivo debe contener datos y pesar como máximo 10 MB.",
+      "fileCount": "Selecciona un solo archivo."
+    },
+    "numberRulesTitle": "Reglas de numeración",
+    "numberRulesPending": "Las reglas de numeración aún no se han publicado para esta categoría y temporada.",
+    "prefix": "El reglamento establece el prefijo {prefix}. Introduce solo los dígitos.",
+    "numberPreview": "Dorsal solicitado {number} · {season}",
+    "availabilityPending": "Disponibilidad sin comprobar. El dorsal aún no está asignado ni reservado.",
+    "review": {
+      "category": "Categoría y temporada",
+      "driver": "Información del piloto",
+      "vehicle": "Información del vehículo",
+      "number": "Dorsal solicitado",
+      "documents": "Documentación seleccionada",
+      "terms": "Reglamentos y condiciones",
+      "acceptRegulations": "Aceptación de los reglamentos",
+      "acceptPrivacy": "Aceptación de la política de privacidad"
+    },
+    "accepted": "Aceptado",
+    "notEntered": "Sin indicar",
+    "edit": "Editar",
+    "editSection": "Editar {section}",
+    "back": "Atrás",
+    "next": "Continuar",
+    "send": "Enviar solicitud de inscripción",
+    "submissionLocked": "El envío se habilitará cuando exista un sistema seguro para recibir solicitudes.",
+    "statusTitle": "Estado de la solicitud",
+    "statusPending": "La consulta de solicitudes estará disponible cuando se habiliten las inscripciones.",
+    "draftReviewed": "Borrador revisado. Aún no se ha enviado ninguna solicitud."
+  },
+  "staff": {
+    "title": "Acceso del personal",
+    "description": "Acceso reservado al personal autorizado de MFG.",
+    "unavailable": "El inicio de sesión todavía no está habilitado. No introduzcas credenciales.",
+    "email": "Correo institucional",
+    "password": "Contraseña",
+    "signIn": "Iniciar sesión",
+    "modulesLink": "Ver módulos previstos"
+  },
+  "admin": {
+    "title": "Panel administrativo",
+    "description": "Módulos previstos para la gestión de competiciones de MFG.",
+    "locked": "La gestión está deshabilitada hasta que exista un sistema de acceso autorizado.",
+    "modules": "Módulos de gestión",
+    "numbers": "Dorsales",
+    "seasons": "Temporadas",
+    "races": "Carreras"
+  },
+  "select": {
+    "search": "Buscar opciones",
+    "noResults": "No hay coincidencias.",
+    "useCustom": "Usar «{value}»",
+    "technical": {
+      "aspiration": {
+        "natural": "Atmosférica",
+        "turbo": "Turbo",
+        "supercharged": "Compresor mecánico",
+        "combined": "Sobrealimentación combinada"
+      },
+      "transmission": {
+        "manual": "Manual",
+        "automatic": "Automática",
+        "sequential": "Secuencial",
+        "dualClutch": "Doble embrague",
+        "cvt": "Variación continua (CVT)"
+      },
+      "drivetrain": {
+        "front": "Delantera (FWD)",
+        "rear": "Trasera (RWD)",
+        "allWheel": "Integral (AWD)",
+        "fourWheel": "Cuatro ruedas (4WD)"
+      }
+    }
+  },
+  "regulation": {
+    "title": "Reglamento MFG {series}",
+    "description": "Documentación deportiva, técnica y condiciones de participación.",
+    "directory": "Directorio de reglamentos",
+    "view": "Consultar reglamento",
+    "contents": "Índice de contenidos",
+    "articleNavigation": "Navegación entre artículos",
+    "version": "Versión del reglamento",
+    "pending": "Pendiente de publicación",
+    "contentPending": "Contenido pendiente de publicación.",
+    "unpublished": "El reglamento o las condiciones aún no están publicados para la temporada seleccionada.",
+    "acceptanceRequired": "Consulta el reglamento y registra tu aceptación para continuar.",
+    "accepted": "Reglamento aceptado",
+    "acceptanceTitle": "Aceptación del reglamento",
+    "declaration": "Declaro haber leído, comprendido y aceptado el reglamento y los términos y condiciones de participación de MFG {series}.",
+    "privacyConsent": "Acepto la política de privacidad.",
+    "acceptReturn": "Aceptar y regresar a la inscripción",
+    "backToEntry": "Volver a la inscripción",
+    "stale": "La selección o la versión cambió. Vuelve a la inscripción y consulta el reglamento actual.",
+    "openDocument": "Abrir documento en otra pestaña",
+    "articles": {
+      "general": "Disposiciones generales",
+      "sporting": "Reglamento deportivo",
+      "technical": "Reglamento técnico",
+      "requirements": "Requisitos de participación",
+      "numbers": "Asignación de dorsales",
+      "sanctions": "Infracciones y sanciones",
+      "terms": "Términos y condiciones"
+    }
+  },
+  "seriesPage": {
+    "about": "Presentación del campeonato",
+    "carousel": "Carrusel de {series}",
+    "factsLabel": "Datos deportivos",
+    "pending": "Por confirmar",
+    "facts": {
+      "division": "División",
+      "rounds": "Rondas",
+      "finalists": "Finalistas",
+      "power": "Límite de potencia",
+      "season": "Temporada vigente",
+      "registration": "Estado de inscripciones"
+    },
+    "sports": "Accesos deportivos",
+    "latestNews": "Últimas noticias",
+    "nextRace": "Próxima carrera",
+    "featuredDrivers": "Pilotos destacados",
+    "championshipStandings": "Clasificación del campeonato",
+    "participatingCars": "Vehículos participantes",
+    "regulatoryInformation": "Información reglamentaria",
+    "viewDrivers": "Ver pilotos",
+    "viewCars": "Ver vehículos",
+    "version": "Versión publicada {version}.",
+    "entryStatus": "{series} · {status}",
+    "openRegistration": "Ir al formulario de inscripción",
+    "back": "Volver a {series}",
+    "super-series": {
+      "introduction": "MFG Super Series representa la máxima categoría de competición de la organización MFG. Reúne a pilotos y vehículos de alto rendimiento en competiciones disputadas sobre carreteras japonesas, donde la técnica, la estrategia y el equilibrio entre potencia y adherencia desempeñan un papel fundamental.",
+      "slides": {
+        "overview": {
+          "title": "La máxima categoría de MFG",
+          "description": "Pilotos y vehículos de alto rendimiento en las carreteras japonesas."
+        },
+        "skill": {
+          "title": "Técnica y estrategia",
+          "description": "El equilibrio entre potencia y adherencia forma parte del desafío deportivo."
+        },
+        "grid": {
+          "title": "La parrilla de Super Series",
+          "description": "Consulta los perfiles de pilotos y vehículos a medida que se publiquen."
+        },
+        "participation": {
+          "title": "Reglamentos de Super Series",
+          "description": "Consulta la documentación deportiva y técnica de la categoría cuando esté disponible."
+        }
+      }
+    },
+    "freshman-series": {
+      "introduction": "MFG Freshman Series es una categoría orientada a la incorporación de nuevos pilotos a la competición de MFG. Su estructura busca ofrecer un entorno competitivo para el desarrollo de nuevos talentos dentro de la organización.",
+      "slides": {
+        "overview": {
+          "title": "El comienzo en MFG",
+          "description": "Una categoría orientada a quienes se incorporan a la competición de MFG."
+        },
+        "skill": {
+          "title": "Desarrollo en competición",
+          "description": "Un entorno competitivo para el desarrollo de nuevos talentos."
+        },
+        "grid": {
+          "title": "La parrilla de Freshman Series",
+          "description": "Sigue las novedades sobre pilotos y vehículos participantes."
+        },
+        "participation": {
+          "title": "Participar en Freshman Series",
+          "description": "Consulta el estado de las inscripciones y los reglamentos de la categoría."
+        }
+      }
+    }
+  },
+  "front": {
+    "shortcuts": "En esta página",
+    "eventDetails": "Información del evento",
+    "championships": "Campeonatos MFG",
+    "aboutTitle": "Sobre MFG",
+    "aboutIntro": "MFG Motorsport es un portal independiente inspirado en MF Ghost y Subaru and Subaru. Su concepto deportivo pone el foco en la técnica de conducción, la estrategia y el equilibrio entre potencia y adherencia. El portal reúne dos campeonatos: Super Series y Freshman Series.",
+    "aboutLink": "Conoce MFG",
+    "explore": "Explorar campeonato",
+    "driverProfile": "Ver perfil del piloto",
+    "carProfile": "Ver ficha técnica",
+    "results": "Últimos resultados",
+    "participation": "¿Preparado para competir?",
+    "gallery": "Galería multimedia",
+    "galleryEmpty": "Aún no hay fotografías ni vídeos publicados.",
+    "partners": "Patrocinadores y colaboradores",
+    "partnersEmpty": "Aún no se han anunciado patrocinadores ni colaboradores.",
+    "footerAbout": "Portal deportivo independiente de MFG Motorsport. Campeonatos, competición y participación.",
+    "policyPending": "Este documento aún no se ha publicado.",
+    "countdown": {
+      "label": "Cuenta regresiva para la próxima carrera",
+      "days": "Días",
+      "hours": "Horas",
+      "minutes": "Minutos",
+      "seconds": "Segundos"
+    },
+    "raceStatus": {
+      "upcoming": "Próxima",
+      "live": "En desarrollo",
+      "finished": "Finalizada"
+    },
+    "mediaKind": {
+      "races": "Carreras",
+      "cars": "Vehículos",
+      "drivers": "Pilotos",
+      "qualifying": "Clasificaciones",
+      "events": "Eventos MFG"
+    },
+    "info": {
+      "about": {
+        "title": "Sobre MFG",
+        "description": "Conoce el concepto deportivo de MFG y sus dos campeonatos."
+      },
+      "contact": {
+        "title": "Contacto",
+        "description": "Canales de contacto del portal MFG."
+      },
+      "privacy": {
+        "title": "Política de privacidad",
+        "description": "Información de privacidad del portal."
+      },
+      "terms": {
+        "title": "Términos y condiciones",
+        "description": "Condiciones de uso del portal."
+      },
+      "faq": {
+        "title": "Preguntas frecuentes",
+        "description": "Información para seguir la competición y consultar cómo participar."
+      }
+    }
+  },
+  "schedule": {
+    "title": "Calendario de competición",
+    "intro": "Consulta las rondas, el programa y los horarios de MFG Super Series y MFG Freshman Series.",
+    "filters": "Filtros de competición",
+    "season": "Temporada",
+    "allSeasons": "Todas las temporadas",
+    "division": "Categoría",
+    "allDivisions": "Todas las categorías",
+    "eventStatus": "Estado del evento",
+    "allStatuses": "Todos los estados",
+    "timeZone": "Zona horaria",
+    "japan": "Japón (JST, UTC+9)",
+    "local": "Hora local",
+    "view": "Vista del calendario",
+    "list": "Lista",
+    "month": "Mes",
+    "next": "Próxima carrera",
+    "noNext": "No hay una próxima carrera programada para esta selección.",
+    "rounds": "Rondas del campeonato",
+    "empty": "No hay eventos publicados para esta selección.",
+    "round": "Ronda {round}",
+    "datePending": "Fecha por confirmar",
+    "details": "Información del evento",
+    "previousMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "currentMonth": "Mes actual",
+    "legend": "Colores de las categorías",
+    "monthEvent": "{title} · {date}",
+    "preview": "Vista de desarrollo con datos de prueba. Los eventos mostrados no son oficiales.",
+    "back": "Volver al calendario",
+    "seasonLabel": "Temporada {season}",
+    "add": "Añadir a mi calendario",
+    "download": "Descargar archivo .ics",
+    "importHint": "Importa el archivo .ics en Outlook o Apple Calendar.",
+    "courseTitle": "Información del recorrido",
+    "length": "Longitud",
+    "layout": "Tipo de trazado",
+    "elevation": "Desnivel",
+    "map": "Mapa del recorrido",
+    "courseEmpty": "Los datos del recorrido están pendientes de publicación.",
+    "program": "Programa de competición",
+    "programEmpty": "El programa está pendiente de publicación.",
+    "sport": "Información deportiva",
+    "sportEmpty": "La documentación deportiva está pendiente de publicación.",
+    "gallery": "Galería multimedia",
+    "status": {
+      "pending": "Pendiente de confirmación",
+      "scheduled": "Programado",
+      "qualifying": "Clasificación en curso",
+      "racing": "Carrera en curso",
+      "finished": "Finalizado",
+      "postponed": "Aplazado",
+      "cancelled": "Cancelado"
+    },
+    "session": {
+      "qualifying": "Clasificación",
+      "race": "Carrera principal",
+      "other": "Actividad adicional"
+    },
+    "resource": {
+      "entries": "Lista de inscritos",
+      "qualifyingResults": "Resultados de clasificación",
+      "grid": "Parrilla de salida",
+      "raceResults": "Resultados de carrera",
+      "news": "Noticias relacionadas",
+      "broadcast": "Retransmisión"
+    }
+  },
+  "championship": {
+    "title": "Clasificación deportiva",
+    "intro": "Posiciones del campeonato, tiempos de clasificación y resultados por ronda de las divisiones MFG.",
+    "preview": "Entorno de desarrollo con pilotos, tiempos y puntuaciones de prueba.",
+    "division": "División",
+    "season": "Temporada",
+    "noSeason": "Sin temporadas publicadas",
+    "round": "Ronda",
+    "roundLabel": "Ronda {round}",
+    "latestRound": "Última ronda",
+    "allRounds": "Todas las rondas",
+    "search": "Buscar",
+    "searchHint": "Piloto, dorsal, fabricante o vehículo",
+    "tabs": "Vistas de clasificación",
+    "empty": "Todavía no hay datos publicados para esta selección.",
+    "noMatches": "Ningún piloto coincide con la búsqueda.",
+    "rules": "Reglamento de puntuación",
+    "updated": "Actualizado el {date} · JST",
+    "revision": "Reglamento {version}",
+    "noPrevious": "Sin ronda anterior publicada",
+    "gain": "Subió {count} posiciones",
+    "loss": "Bajó {count} posiciones",
+    "steady": "Conservó la posición",
+    "leaders": "Líderes del campeonato",
+    "bib": "Dorsal {number}",
+    "ghost": "Ghost Record · Tiempo de referencia {time}",
+    "gridNote": "Parrilla de salida publicada. Puede reflejar cambios posteriores a la clasificación cronometrada.",
+    "provisionalNote": "Selección por tiempo. La parrilla definitiva puede cambiar tras revisiones o sanciones.",
+    "timedSelection": "Selección por tiempo",
+    "startingGrid": "Parrilla de salida",
+    "compare": "Comparar con",
+    "noComparison": "Sin comparación",
+    "metricLabel": "Indicador",
+    "csv": "Descargar CSV",
+    "pdf": "Imprimir o guardar PDF",
+    "roundResults": "Resultados de la ronda",
+    "eventInfo": "Información del evento",
+    "tab": {
+      "general": "Clasificación general",
+      "qualifying": "Clasificación cronometrada",
+      "finalists": "Clasificados a la final",
+      "points": "Puntos por ronda",
+      "statistics": "Estadísticas"
+    },
+    "publication": {
+      "pending": "Pendiente de publicación",
+      "provisional": "Provisional",
+      "review": "En revisión",
+      "final": "Definitiva",
+      "corrected": "Rectificada"
+    },
+    "field": {
+      "pos": "Posición",
+      "driver": "Piloto",
+      "change": "Variación",
+      "number": "Dorsal",
+      "country": "Nacionalidad",
+      "vehicle": "Vehículo",
+      "rounds": "Rondas disputadas",
+      "wins": "Victorias",
+      "podiums": "Podios",
+      "points": "Puntos",
+      "gap": "Diferencia con el líder",
+      "best": "Mejor tiempo",
+      "leaderGap": "Diferencia con el líder",
+      "previousGap": "Diferencia con el anterior",
+      "day": "Día de clasificación",
+      "zone": "Estado de clasificación",
+      "deduction": "Deducciones",
+      "outcome": "Participación"
+    },
+    "short": {
+      "pos": "POS",
+      "driver": "PILOTO",
+      "change": "VAR",
+      "number": "N.º",
+      "country": "NAC",
+      "vehicle": "VEHÍCULO",
+      "rounds": "RD",
+      "wins": "WIN",
+      "podiums": "POD",
+      "points": "PTS",
+      "gap": "GAP"
+    },
+    "outcome": {
+      "participated": "Participó",
+      "absent": "Ausente",
+      "retired": "Abandono",
+      "disqualified": "Descalificado"
+    },
+    "zone": {
+      "final": "Clasificado a la final",
+      "points": "Zona de puntuación",
+      "outside": "Fuera de puntuación"
+    },
+    "metric": {
+      "points": "Evolución de puntos",
+      "position": "Evolución de posiciones",
+      "gap": "Diferencia con el líder",
+      "qualifying": "Rendimiento clasificatorio",
+      "wins": "Victorias",
+      "podiums": "Podios",
+      "poles": "Poles",
+      "finals": "Participaciones en finales",
+      "comparisonGap": "Diferencia entre pilotos"
+    }
+  },
+  "information": {
+    "circuits": "Circuitos",
+    "circuitsIntro": "Recorridos de competición con ubicación, trazado e historial de carreras.",
+    "circuitsEmpty": "Aún no hay fichas oficiales de recorridos publicadas en el portal.",
+    "profile": "Ver perfil del piloto",
+    "circuitDetails": "Ver ficha del circuito",
+    "noMatches": "No hay fichas que coincidan con estos filtros.",
+    "driverSearch": "Nombre o dorsal",
+    "backDrivers": "Volver a pilotos",
+    "backCircuits": "Volver a circuitos",
+    "engine": "Motor",
+    "power": "Potencia",
+    "weight": "Peso",
+    "drivetrain": "Tracción",
+    "transmission": "Transmisión",
+    "vehicle": "Ficha técnica del vehículo",
+    "vehiclePending": "La ficha técnica aún no se ha publicado.",
+    "history": "Historial deportivo",
+    "historyPending": "Todavía no hay resultados publicados.",
+    "finish": "Posición {position}",
+    "points": "{value} puntos",
+    "sectors": "Sectores del recorrido",
+    "circuitHistory": "Historial de carreras",
+    "origins": "Origen y propósito",
+    "originsText": "El portal nace como un proyecto independiente inspirado en la competición de ficción de MF Ghost y Subaru and Subaru. Reúne en un solo sitio información sobre las divisiones, el calendario y la participación.",
+    "structure": "Estructura de la competición",
+    "structureText": "El proyecto presenta dos divisiones. Cada una tiene su propia identidad, calendario y clasificación. Los documentos y datos deportivos se incorporan a medida que se publican.",
+    "documentsPending": "Documentación pendiente de publicación",
+    "conduct": "Normas de conducta",
+    "notices": "Comunicados y modificaciones reglamentarias",
+    "faq": {
+      "general": {
+        "category": "Información general",
+        "question": "¿Qué es MFG Motorsport?",
+        "answer": "Es un portal independiente inspirado en MF Ghost y Subaru and Subaru. Reúne información deportiva e institucional del proyecto."
+      },
+      "championships": {
+        "category": "Campeonatos",
+        "question": "¿Qué divisiones tiene el portal?",
+        "answer": "MFG Super Series y MFG Freshman Series tienen páginas propias con su presentación y sus accesos deportivos."
+      },
+      "registration": {
+        "category": "Inscripciones",
+        "question": "¿Dónde puedo consultar las inscripciones?",
+        "answer": "En la página de inscripciones puedes seleccionar una división y consultar su estado. El envío definitivo se habilitará cuando el portal pueda procesar solicitudes."
+      },
+      "requirements": {
+        "category": "Requisitos de participación",
+        "question": "¿Dónde se publicarán los requisitos?",
+        "answer": "Los requisitos aparecerán en la sección de inscripción y en el reglamento de la división correspondiente cuando estén publicados."
+      },
+      "technical": {
+        "category": "Vehículos y normativa técnica",
+        "question": "¿Dónde se consultan los vehículos y las reglas técnicas?",
+        "answer": "Los vehículos se mostrarán en las fichas públicas de pilotos. Las reglas técnicas se consultan en el reglamento de cada división."
+      },
+      "calendar": {
+        "category": "Calendario y competición",
+        "question": "¿Dónde se consultan las fechas y horarios?",
+        "answer": "El calendario reúne los eventos publicados y permite consultar sus horarios en JST o en tu zona horaria local."
+      }
+    },
+    "contact": {
+      "general": {
+        "title": "Consultas generales",
+        "body": "Encuentra información sobre el portal y las preguntas más habituales."
+      },
+      "sport": {
+        "title": "Consultas deportivas",
+        "body": "Consulta los eventos publicados y los horarios de competición."
+      },
+      "registration": {
+        "title": "Consultas sobre inscripciones",
+        "body": "Revisa el proceso, los requisitos y el estado de apertura de cada división."
+      },
+      "technical": {
+        "title": "Consultas técnicas",
+        "body": "Consulta la documentación deportiva y técnica por división."
+      },
+      "media": {
+        "title": "Prensa y comunicación",
+        "body": "Consulta los avisos y publicaciones públicas del portal."
+      }
+    }
+  }
+}

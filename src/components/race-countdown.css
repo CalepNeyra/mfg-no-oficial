@@ -1,0 +1,4 @@
+.race-countdown { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .65rem; }
+.race-countdown > div { display: flex; flex-direction: column-reverse; align-items: center; min-width: 3.75rem; padding: .3rem .55rem; background: var(--color-mfg-ink); color: white; }
+.race-countdown dd { font: 800 1.55rem/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.race-countdown dt { font-size: .75rem; }

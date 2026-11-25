@@ -1,0 +1,101 @@
+
+.site-footer { background: #141820; color: white; --footer-line: #ffffff29; --footer-muted: #c2cbd5; }
+.site-footer :focus-visible { outline-color: white; }
+.footer-institutional {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.9fr) auto;
+  grid-template-areas: "brand series top";
+  align-items: center;
+  gap: 1rem clamp(1.1rem, 4vw, 4rem);
+  padding-block: clamp(1.15rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--footer-line);
+}
+.footer-brand { grid-area: brand; min-width: 0; }
+.footer-brand .wordmark { gap: .42rem; }
+.footer-brand .wordmark-symbol { font-size: clamp(3rem, 4vw, 3.65rem); }
+.footer-brand .wordmark-name { font-size: .65rem; letter-spacing: .17em; }
+.footer-brand p { max-width: 37ch; margin-top: .65rem; color: var(--footer-muted); font-size: .88rem; }
+.footer-series { grid-area: series; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+.footer-series > a { min-width: 0; height: 100%; }
+.footer-series .series-identity {
+  gap: .4rem .55rem;
+  height: 100%;
+  padding: .55rem .65rem;
+  border: 1px solid var(--footer-line);
+  background: #ffffff08;
+  color: white;
+  transition: background-color .18s ease, border-color .18s ease;
+}
+.footer-series a:hover .series-identity { border-color: var(--color-mfg-red); background: #ffffff12; }
+.footer-series .series-identity-mark > span { background: #313a48; white-space: nowrap; }
+.footer-series [data-division="freshman-series"] .series-identity-mark strong { background: #345873; }
+.footer-series .series-identity p { font: 800 clamp(1.05rem, 1.8vw, 1.4rem)/1.08 var(--font-display); text-transform: uppercase; }
+.footer-to-top {
+  grid-area: top;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  min-height: 2.75rem;
+  padding-inline: .65rem;
+  border: 1px solid var(--footer-line);
+  color: white;
+  font-size: .85rem;
+  font-weight: 750;
+  transition: border-color .18s ease, background-color .18s ease;
+}
+.footer-to-top svg { color: #e95770; flex: 0 0 auto; }
+.footer-to-top:hover { border-color: var(--color-mfg-red); background: #ffffff0e; }
+.footer-columns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .95rem clamp(.8rem, 2vw, 2rem); padding-block: 1.25rem; }
+.footer-columns h2, .footer-disclosures summary { color: white; font-size: .95rem; font-weight: 800; }
+.footer-columns h2 { margin-bottom: .32rem; }
+.footer-disclosures { display: none; }
+.footer-directory ul { display: grid; gap: .22rem; }
+.footer-directory a, .footer-policy a { color: var(--footer-muted); font-size: .88rem; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .2em; transition: color .18s ease, text-decoration-color .18s ease; }
+.footer-directory a:hover, .footer-policy a:hover { color: white; text-decoration-color: #e95770; }
+.footer-utilities { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; border-top: 1px solid var(--footer-line); padding-block: .4rem; }
+.footer-languages button, .footer-utilities .social-links a { min-height: 2.45rem; transition: color .18s ease, background-color .18s ease, box-shadow .18s ease; }
+.footer-languages button:focus-visible, .footer-utilities .social-links a:focus-visible { outline-offset: -3px; }
+.footer-legal { border-top: 1px solid var(--footer-line); background: #10141b; }
+.footer-legal-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .45rem 1rem; align-items: center; padding-block: .75rem .9rem; }
+.footer-year { font-size: .85rem; font-weight: 750; }
+.footer-policy { display: flex; flex-wrap: wrap; gap: .25rem .95rem; }
+.footer-policy a { text-decoration-color: #ffffff55; }
+.footer-notice { grid-column: 1 / -1; color: var(--footer-muted); font-size: .82rem; }
+
+@media (max-width: 66rem) {
+  .footer-institutional { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "brand top" "series series"; }
+  .footer-series { width: min(100%, 34rem); }
+}
+@media (max-width: 56rem) {
+  .footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 36rem) {
+  .footer-institutional {
+    grid-template-areas: "logo top" "description description" "series series";
+    align-items: center;
+    gap: .75rem .55rem;
+  }
+  .footer-brand { display: contents; }
+  .footer-brand .wordmark { grid-area: logo; justify-self: start; }
+  .footer-brand p { grid-area: description; max-width: 46ch; margin-top: 0; }
+  .footer-series .series-identity { align-content: start; }
+  .footer-series .series-identity-mark { flex-shrink: 1; }
+  .footer-series .series-identity-mark strong { font-size: 1.05rem; }
+  .footer-series .series-identity-mark > span { padding-inline: .3rem; font-size: .7rem; }
+  .footer-to-top { font-size: .78rem; padding-inline: .45rem; }
+  .footer-columns { display: none; }
+  .footer-disclosures { display: block; }
+  .footer-disclosures details + details { border-top: 1px solid var(--footer-line); }
+  .footer-disclosures summary { display: flex; justify-content: space-between; align-items: center; gap: .35rem; min-height: 2.75rem; cursor: pointer; list-style: none; }
+  .footer-disclosures summary::-webkit-details-marker { display: none; }
+  .footer-disclosures summary svg { color: var(--footer-muted); transition: transform .18s ease; }
+  .footer-disclosures details[open] summary svg { transform: rotate(180deg); color: #e95770; }
+  .footer-disclosures summary:focus-visible { outline-offset: -2px; }
+  .footer-disclosures ul { padding: 0 0 .55rem .55rem; }
+  .footer-disclosures a { display: inline-flex; align-items: center; min-height: 2.15rem; }
+  .footer-legal-inner { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-footer :is(a, button, summary svg, .series-identity) { transition: none; }
+}
