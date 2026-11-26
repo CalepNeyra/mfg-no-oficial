@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
 import { Link } from "@/i18n/navigation";
-import { categories, getNumberAvailabilityQuery, isCategory, numberPrefix } from "@/lib/registration/catalog";
+import { categories, getNumberAvailabilityQuery, isCategory, numberPrefix, type Category } from "@/lib/registration/catalog";
 import { publicationKey, regulationHref } from "@/lib/registration/regulations";
 import { categorySchema, driverSchema, numberSchema, vehicleSchema,
   type RegistrationDraft } from "@/lib/registration/schema";
@@ -16,7 +16,7 @@ import { useRegistrationDraft } from "./registration/draft-provider";
 
 const steps = ["category", "driver", "vehicle", "number", "review"] as const;
 
-export function RegistrationForm() {
+export function RegistrationForm({ preferredCategory }: { preferredCategory?: Category }) {
   const t = useTranslations();
   const { control, clearErrors, getValues, setError, setFocus, setValue } = useFormContext<RegistrationDraft>();
   const { catalog, receipt, clearAcceptance, beginReview, completed, setCompleted } = useRegistrationDraft();
@@ -32,6 +32,10 @@ export function RegistrationForm() {
   const requiresPublishedSeason = noSeasons || (Boolean(category) && !seasons.length);
   const number = getNumberAvailabilityQuery(category, season, raceNumber);
   const prefix = numberPrefix(category, season);
+
+  useEffect(() => {
+    if (preferredCategory && !getValues("category")) setValue("category", preferredCategory);
+  }, [getValues, preferredCategory, setValue]);
 
   useEffect(() => {
     if (navigating.current) heading.current?.focus();

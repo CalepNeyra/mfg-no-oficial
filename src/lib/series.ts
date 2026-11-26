@@ -19,6 +19,7 @@ export type SeriesProfile = {
 type SeriesData = {
   number: "01" | "02";
   images: Partial<Record<"overview" | "skill" | "grid" | "participation", PortalImage>>;
+  editorialImage?: PortalImage;
   currentSeasonId?: string;
   rounds?: number;
   finalists?: number;

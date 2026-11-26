@@ -22,21 +22,21 @@ function EditorialCard({ item, featured = false, summary = false }: {
   );
 }
 
-export function EditorialNews({ preview = false, division, compact = false }: {
-  preview?: boolean; division?: Division; compact?: boolean;
+export function EditorialNews({ preview = false, division, compact = false, detailed = false }: {
+  preview?: boolean; division?: Division; compact?: boolean; detailed?: boolean;
 }) {
   const t = useTranslations("sections.news");
   const items = division ? news.filter((item) => item.division === division) : news;
   if (!items.length) return <EmptyState icon={Newspaper}>{t("empty")}</EmptyState>;
 
-  const home = compact && !division;
-  const ordered = home ? [...items].sort((a, b) => Date.parse(b.date) - Date.parse(a.date)) : items;
-  const [featured, ...secondary] = preview ? ordered.slice(0, home ? 4 : 3) : ordered;
+  const summary = detailed || (compact && !division);
+  const ordered = summary ? [...items].sort((a, b) => Date.parse(b.date) - Date.parse(a.date)) : items;
+  const [featured, ...secondary] = preview ? ordered.slice(0, summary ? 4 : 3) : ordered;
   return (
     <div className="editorial-grid">
-      <EditorialCard item={featured} featured summary={home} />
+      <EditorialCard item={featured} featured summary={summary} />
       {secondary.length > 0 && <div className="editorial-secondary">
-        {secondary.map((item) => <EditorialCard key={item.href} item={item} summary={home} />)}
+        {secondary.map((item) => <EditorialCard key={item.href} item={item} summary={summary} />)}
       </div>}
     </div>
   );

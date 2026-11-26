@@ -405,7 +405,10 @@
           "description": "Consulta el estado de las inscripciones y los reglamentos de la categoría."
         }
       }
-    }
+    },
+    "overviewTab": "Campeonato",
+    "viewCircuits": "Ver circuitos",
+    "participationCopy": "Consulta los requisitos y el reglamento de esta división antes de iniciar tu solicitud."
   },
   "front": {
     "shortcuts": "En esta página",

@@ -54,7 +54,7 @@ export function StandingsPreviewClient({ division, preview = false, rows }: { di
   if (division) {
     return <div className="standings standings-scoped" tabIndex={0}
       role="region" aria-label={t("standings.table", { series: t(`divisions.${division}.title`) })}>
-      <StandingsTable division={division} rows={rows[division] ?? []} />
+      <StandingsTable division={division} rows={rows[division] ?? []} preview={preview} />
     </div>;
   }
 

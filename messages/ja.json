@@ -405,7 +405,10 @@
           "description": "エントリーの受付状況とカテゴリーの規則をご確認ください。"
         }
       }
-    }
+    },
+    "overviewTab": "選手権",
+    "viewCircuits": "コースを見る",
+    "participationCopy": "申請の前に、このカテゴリーの参加要件と規則をご確認ください。"
   },
   "front": {
     "shortcuts": "このページの項目",

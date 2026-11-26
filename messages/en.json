@@ -405,7 +405,10 @@
           "description": "Find the latest registration status and division regulations."
         }
       }
-    }
+    },
+    "overviewTab": "Championship",
+    "viewCircuits": "View circuits",
+    "participationCopy": "Review the division’s entry requirements and regulations before starting your application."
   },
   "front": {
     "shortcuts": "On this page",
