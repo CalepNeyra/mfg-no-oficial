@@ -7,16 +7,16 @@ import { googleCalendarHref } from "@/lib/calendar-export";
 import { raceResources, type Race } from "@/lib/race-schedule";
 import { EmptyState, MediaSlot } from "../portal-ui";
 import { SeriesIdentity } from "../series-identity";
-import { ZoneSelect } from "./calendar-filters";
+import { SportTimeZoneSelect } from "./sport-time-zone-select";
 import { useCalendarQuery } from "./calendar-url";
 import { CalendarPreviewNotice, RaceDate, RaceStatusBadge, SessionTime } from "./event-card";
 
-export function RaceDetails({ race, season, preview, standingsHref, courseHref }: { race: Race; season?: string; preview: boolean; standingsHref?: string; courseHref?: string }) {
+export function RaceDetails({ race, season, preview, now, standingsHref, courseHref }: { race: Race; season?: string; preview: boolean; now: number; standingsHref?: string; courseHref?: string }) {
   const t = useTranslations("schedule");
   const locale = useLocale();
   const portal = useTranslations();
   const format = useFormatter();
-  const { query, update, zone } = useCalendarQuery();
+  const { query, zone } = useCalendarQuery();
   const back = query.toString();
   const external = googleCalendarHref(race);
   const exportQuery = new URLSearchParams({ locale });
@@ -47,8 +47,7 @@ export function RaceDetails({ race, season, preview, standingsHref, courseHref }
         </div>
       </header>
       <div className="race-detail-actions">
-        <ZoneSelect value={query.get("tz") === "local" ? "local" : "jst"}
-          onChange={(value) => update("tz", value === "local" ? value : null)} />
+        <SportTimeZoneSelect now={now} eventStart={race.schedule?.startAt} />
         {external && (
           <section aria-labelledby="export-title">
             <h2 id="export-title">{t("add")}</h2>

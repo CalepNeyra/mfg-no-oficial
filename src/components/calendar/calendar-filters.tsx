@@ -4,19 +4,9 @@ import { divisionSlugs } from "@/lib/portal";
 import { raceStatuses, type CalendarKey, type RaceSeason } from "@/lib/race-schedule";
 import { MFGSelect, type MFGOption } from "../mfg-select";
 
-export function ZoneSelect({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const t = useTranslations("schedule");
-  return (
-    <div className="calendar-select">
-      <label htmlFor="schedule-zone">{t("timeZone")}</label>
-      <MFGSelect id="schedule-zone" value={value} onValueChange={onChange} placeholder={t("timeZone")}
-        options={[{ value: "jst", label: t("japan") }, { value: "local", label: t("local") }]} />
-    </div>
-  );
-}
-
-export function CalendarFilters({ query, seasons, update }: {
-  query: URLSearchParams; seasons: readonly RaceSeason[]; update: (key: CalendarKey, value: string | null) => void;
+import { SportTimeZoneSelect } from "./sport-time-zone-select";
+export function CalendarFilters({ query, seasons, update, now }: {
+  now: number; query: URLSearchParams; seasons: readonly RaceSeason[]; update: (key: CalendarKey, value: string | null) => void;
 }) {
   const t = useTranslations("schedule");
   const portal = useTranslations();
@@ -39,7 +29,7 @@ export function CalendarFilters({ query, seasons, update }: {
           </div>
         );
       })}
-      <ZoneSelect value={query.get("tz") === "local" ? "local" : "jst"} onChange={(value) => update("tz", value === "local" ? value : null)} />
+      <SportTimeZoneSelect now={now} />
       <div className="calendar-view" role="group" aria-label={t("view")}>
         <button type="button" aria-pressed={query.get("view") !== "month"} onClick={() => update("view", null)}>
           <List size={17} aria-hidden="true" />{t("list")}

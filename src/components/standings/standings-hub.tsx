@@ -9,11 +9,12 @@ import type { Championship, ChampionshipRound, Driver, Publication } from "@/lib
 import { aggregatePublications, buildChampionship, isPublished } from "@/lib/championship-scoring";
 import type { Division } from "@/lib/competition";
 import { divisionSlugs } from "@/lib/portal";
-import { japanTime, type RaceSeason } from "@/lib/race-schedule";
+import type { RaceSeason } from "@/lib/race-schedule";
 import { regulationHref } from "@/lib/registration/regulations";
 import { seriesData } from "@/lib/series";
 import { EmptyState } from "../portal-ui";
 import { SeriesIdentity } from "../series-identity";
+import { useSportTimeZone } from "../sport-time";
 import { StandingsStats } from "./standings-stats";
 import { ChampionshipLeaders, Finalists, GeneralTable, PointsMatrix, QualifyingTable, RoundResults } from "./standings-tables";
 import { DriverSearch, StandingsExports, StandingsSelect } from "./standings-tools";
@@ -32,6 +33,7 @@ export function StandingsHub({ seasons, championships, rounds, preview }: {
   const t = useTranslations("championship");
   const portal = useTranslations();
   const format = useFormatter();
+  const zone = useSportTimeZone();
   const searchParams = useSearchParams();
   const [query, setQuery] = useState("");
   const [gridMode, setGridMode] = useState<"qualification" | "grid">("grid");
@@ -103,7 +105,8 @@ export function StandingsHub({ seasons, championships, rounds, preview }: {
         <span className="stand-state" data-publication={publication.state}>{t(`publication.${publication.state}`)}</span>
         {publication.updatedAt && isPublished(publication) && (
           <time dateTime={publication.updatedAt}>{t("updated", { date: format.dateTime(new Date(publication.updatedAt), {
-            timeZone: japanTime, dateStyle: "medium", timeStyle: "short",
+            timeZone: zone, year: "numeric", month: "short", day: "numeric",
+            hour: "numeric", minute: "2-digit", timeZoneName: "short",
           }) })}</time>
         )}
         {championship?.scoring?.ratified && <span>{t("revision", { version: championship.scoring.revision })}</span>}

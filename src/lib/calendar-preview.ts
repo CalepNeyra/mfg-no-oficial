@@ -1,4 +1,5 @@
-import { dayKey, dayStamp, japanTime, type Race, type RaceSeason } from "./race-schedule";
+import { dayKey, type Race, type RaceSeason } from "./race-schedule";
+import { japanTime, utcOffsetAt } from "./sport-time-zones";
 
 const season: RaceSeason = { id: "preview", label: "QA" };
 
@@ -6,7 +7,9 @@ export function previewCalendar(now: number, locale: string) {
   const labels = locale === "ja" ? ["テストイベント A", "テストイベント B", "日程未定のテストイベント", "テスト会場", "テストコース"] :
     locale === "en" ? ["Test event A", "Test event B", "Unscheduled test event", "Test venue", "Test course"] :
     ["Evento de prueba A", "Evento de prueba B", "Evento de prueba sin fecha", "Sede de prueba", "Recorrido de prueba"];
-  const jstMidnight = dayStamp(dayKey(now, japanTime)) - 9 * 3600000;
+  const referenceDay = dayKey(now, japanTime);
+  const offset = utcOffsetAt(japanTime, now).slice(3);
+  const jstMidnight = Date.parse(`${referenceDay}T00:00:00${offset}`);
   const iso = (offset: number) => new Date(jstMidnight + offset * 3600000).toISOString();
 
   const races: Race[] = [{

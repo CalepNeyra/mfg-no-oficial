@@ -1,7 +1,6 @@
 import type { PortalImage } from "@/components/portal-ui";
 import type { Division, MediaItem } from "./competition";
 
-export const japanTime = "Asia/Tokyo";
 export const raceStatuses = ["pending", "scheduled", "qualifying", "racing", "finished", "postponed", "cancelled"] as const;
 export type RaceStatus = (typeof raceStatuses)[number];
 export const sessionKinds = ["qualifying", "race", "other"] as const;
@@ -22,7 +21,7 @@ export type Race = {
   division: Division;
   location?: string;
   state: RaceStatus;
-  // ISO 8601 instants with a UTC offset. endAt is exclusive.
+  // Store ISO 8601 instants in UTC. endAt is exclusive.
   schedule?: { startAt: string; endAt?: string; confirmed: boolean };
   sessions?: readonly RaceSession[];
   image?: PortalImage;
@@ -95,7 +94,7 @@ export function upcomingRace(records: readonly Race[], now: number) {
   }
 }
 
-export const calendarKeys = ["season", "series", "status", "view", "month", "tz", "preview"] as const;
+export const calendarKeys = ["season", "series", "status", "view", "month", "preview"] as const;
 export type CalendarKey = (typeof calendarKeys)[number];
 export type CalendarSearch = Record<string, string | string[] | undefined>;
 

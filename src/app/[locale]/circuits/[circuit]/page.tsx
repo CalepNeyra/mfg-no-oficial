@@ -4,11 +4,12 @@ import { getFormatter, getTranslations, setRequestLocale } from "next-intl/serve
 import { Flag, Route } from "lucide-react";
 import { InformationHeading } from "@/components/information/information-layout";
 import { EmptyState, MediaSlot } from "@/components/portal-ui";
+import { SportTime } from "@/components/sport-time";
 import { pageAlternates } from "@/i18n/metadata";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { circuitHref, findCircuit, racesAtCircuit } from "@/lib/public-information";
-import { japanTime, raceHref, sortRaces } from "@/lib/race-schedule";
+import { raceHref, sortRaces } from "@/lib/race-schedule";
 import "../../information.css";
 
 type Props = { params: Promise<{ locale: Locale; circuit: string }> };
@@ -58,7 +59,7 @@ export default async function CircuitDetail({ params }: Props) {
         {races.length ? <ul className="info-event-history">{races.map((race) => <li key={race.id}>
           <Link className="text-link" href={raceHref(race.id)}>{race.title}</Link>
           <span>{t(`divisions.${race.division}.title`)}</span>
-          {race.schedule && <time dateTime={race.schedule.startAt}>{format.dateTime(new Date(race.schedule.startAt), { dateStyle: "long", timeZone: japanTime })}</time>}
+          {race.schedule && <SportTime instant={race.schedule.startAt} dateOnly />}
         </li>)}</ul> : <EmptyState icon={Flag}>{t("information.historyPending")}</EmptyState>}
       </section>
     </div>

@@ -17,7 +17,7 @@ async function getEvent({ params, searchParams }: Props) {
   const data = getCalendarData(locale, (await searchParams).preview);
   const race = data.races.find(({ id }) => id === event);
   if (!race) notFound();
-  return { locale, race, preview: data.preview, season: data.seasons.find(({ id }) => id === race.seasonId)?.label };
+  return { locale, race, now: data.now, preview: data.preview, season: data.seasons.find(({ id }) => id === race.seasonId)?.label };
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
@@ -26,9 +26,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 export default async function RaceEventPage(props: Props) {
-  const { locale, race, preview, season } = await getEvent(props);
+  const { locale, race, preview, season, now } = await getEvent(props);
   setRequestLocale(locale);
   const standingsHref = preview ? undefined : eventStandingsHref(race.division, race.seasonId, race.id);
   const courseHref = race.courseId && findCircuit(race.courseId) ? circuitHref(race.courseId) : undefined;
-  return <div className="competition-calendar"><RaceDetails race={race} season={season} preview={preview} standingsHref={standingsHref} courseHref={courseHref} /></div>;
+  return <div className="competition-calendar"><RaceDetails race={race} season={season} preview={preview} now={now} standingsHref={standingsHref} courseHref={courseHref} /></div>;
 }

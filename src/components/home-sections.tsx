@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CalendarDays, Clapperboard, Flag, Handshake, MapPin } from "lucide-react";
-import { getFormatter, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -8,13 +8,14 @@ import { gallery, partners, races, results } from "@/lib/competition";
 import { homeMedia } from "@/lib/home-media";
 import { divisionSlugs, sections } from "@/lib/portal";
 import { entryCatalog } from "@/lib/registration/catalog";
-import { japanTime, raceHref, sortRaces } from "@/lib/race-schedule";
+import { raceHref, sortRaces } from "@/lib/race-schedule";
 import { driverHref, publicDrivers } from "@/lib/public-information";
 import { regulationHref } from "@/lib/registration/regulations";
 import { seriesData } from "@/lib/series";
 import { getUpcomingRace } from "@/lib/upcoming-race";
 import { ActionLink, EmptyState, MediaSlot, SectionHeading } from "./portal-ui";
 import { RaceCountdown } from "./race-countdown";
+import { SportTime } from "./sport-time";
 
 export function HomeSection({ id, title, link, children, tone }: {
   id: string; title: string; link?: { href: string; label: string }; children: ReactNode; tone?: "paper";
@@ -31,7 +32,6 @@ export function HomeSection({ id, title, link, children, tone }: {
 
 export async function NextRace() {
   const t = await getTranslations();
-  const format = await getFormatter();
   const next = await getUpcomingRace();
   const race = next?.race;
 
@@ -46,10 +46,7 @@ export async function NextRace() {
               <p className="front-race-meta">{t("calendar.round", { round: race.round, series: t(`divisions.${race.division}.title`) })}</p>
               <h3>{race.title}</h3>
               {race.location && <p><MapPin size={16} aria-hidden="true" />{race.location}</p>}
-              <time dateTime={next.schedule.startAt}>{format.dateTime(new Date(next.schedule.startAt), {
-                timeZone: japanTime, year: "numeric", month: "long", day: "numeric",
-                hour: "numeric", minute: "2-digit", timeZoneName: "short",
-              })}</time>
+              <SportTime instant={next.schedule.startAt} />
               <RaceCountdown date={next.schedule.startAt} />
             </>
           ) : <p>{t("sections.calendar.empty")}</p>}

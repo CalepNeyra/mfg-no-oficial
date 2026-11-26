@@ -38,7 +38,15 @@ export function SessionTime({ start, end, zone, full = false }: { start: string;
   const from = new Date(parseInstant(start));
   const until = end && new Date(parseInstant(end));
   if (!Number.isFinite(from.getTime())) return null;
-  return <time dateTime={start}>{until && until > from ? formatter.formatRange(from, until) : formatter.format(from)}</time>;
+  const hasEnd = until && until > from;
+  const startLabel = formatter.format(from);
+  let label = startLabel;
+  if (hasEnd) {
+    const offsetChanged = full && formatter.formatToParts(from).find(({ type }) => type === "timeZoneName")?.value !==
+      formatter.formatToParts(until).find(({ type }) => type === "timeZoneName")?.value;
+    label = offsetChanged ? `${startLabel} \u2013 ${formatter.format(until)}` : formatter.formatRange(from, until);
+  }
+  return <time dateTime={from.toISOString()}>{label}</time>;
 }
 
 export function RaceCard({ race, zone, href }: { race: Race; zone: string; href: string }) {
@@ -62,7 +70,7 @@ export function RaceCard({ race, zone, href }: { race: Race; zone: string; href:
         </div>
         {sessions.length > 0 && <dl className="event-sessions">
           {sessions.map((session) => <div key={session.id}><dt>{session.title ?? t(`session.${session.kind}`)}</dt>
-            <dd><SessionTime start={session.startAt} zone={zone} /></dd></div>)}
+            <dd><SessionTime start={session.startAt} end={session.endAt} zone={zone} /></dd></div>)}
         </dl>}
         <ActionLink href={href}>{t("details")}</ActionLink>
       </div>
@@ -80,7 +88,7 @@ export function FeaturedRace({ race, start, zone, href }: { race: Race; start: s
         <div className="event-meta"><span>{t("round", { round: race.round })}</span><RaceStatusBadge state={race.state} /></div>
         <h4>{race.title}</h4>
         <div className="event-facts">
-          <p><Clock3 size={16} aria-hidden="true" /><RaceDate schedule={race.schedule} zone={zone} /></p>
+          <p><Clock3 size={16} aria-hidden="true" /><SessionTime start={start} zone={zone} full /></p>
           {race.location && <p><MapPin size={16} aria-hidden="true" />{race.location}</p>}
         </div>
         <RaceCountdown date={start} />

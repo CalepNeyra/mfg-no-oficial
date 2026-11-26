@@ -5,15 +5,15 @@ import type { Locale } from "@/i18n/routing";
 import { championships, previewChampionship } from "@/lib/championship-data";
 import type { Division } from "@/lib/competition";
 import { circuitHref, driverHref, findCircuit, publicCircuits, publicDrivers } from "@/lib/public-information";
-import { japanTime, raceHref } from "@/lib/race-schedule";
+import { raceHref } from "@/lib/race-schedule";
 import { seriesHref } from "@/lib/series";
 import { getUpcomingRace } from "@/lib/upcoming-race";
 import { ActionLink, EmptyState, MediaSlot } from "./portal-ui";
 import { RaceCountdown } from "./race-countdown";
+import { SportTime } from "./sport-time";
 
 export async function SeriesNextRace({ division }: { division: Division }) {
   const t = await getTranslations();
-  const format = await getFormatter();
   const next = await getUpcomingRace(division);
   const href = seriesHref(division, "calendar");
 
@@ -30,9 +30,7 @@ export async function SeriesNextRace({ division }: { division: Division }) {
       <p className="series-kicker"><Flag size={16} aria-hidden="true" />{t("schedule.round", { round: race.round })}</p>
       <h3>{race.title}</h3>
       {race.location && <p><MapPin size={17} aria-hidden="true" />{race.location}</p>}
-      <p><CalendarDays size={17} aria-hidden="true" /><time dateTime={schedule.startAt}>
-        {format.dateTime(new Date(schedule.startAt), { dateStyle: "long", timeStyle: "short", timeZone: japanTime })} · JST
-      </time></p>
+      <p><CalendarDays size={17} aria-hidden="true" /><SportTime instant={schedule.startAt} /></p>
       <RaceCountdown date={schedule.startAt} />
       <ActionLink href={raceHref(race.id, new URLSearchParams({ series: division }))} primary>{t("schedule.details")}</ActionLink>
     </div>

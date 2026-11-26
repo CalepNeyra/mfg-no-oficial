@@ -42,7 +42,7 @@ export function CompetitionCalendar({ records, seasons, now, preview }: {
   return (
     <div className="shell calendar-content">
       {preview && <CalendarPreviewNotice />}
-      <CalendarFilters query={query} seasons={seasons} update={update} />
+      <CalendarFilters query={query} seasons={seasons} update={update} now={clock} />
       <section aria-labelledby="calendar-next">
         <h2 id="calendar-next">{t("next")}</h2>
         {next ? <FeaturedRace race={next.race} start={next.schedule.startAt} zone={zone} href={details(next.race)} />

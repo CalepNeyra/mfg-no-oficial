@@ -7,6 +7,7 @@ export type MFGOption = {
   value: string;
   label: string;
   description?: string;
+  group?: string;
   keywords?: readonly string[];
 };
 
