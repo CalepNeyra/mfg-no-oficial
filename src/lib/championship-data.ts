@@ -49,6 +49,5 @@ export function eventStandingsHref(division: Division, seasonId: string, raceId:
   const round = championships.find((entry) => entry.division === division && entry.seasonId === seasonId)
     ?.publications.find((entry) => entry.raceId === raceId);
   if (!round || (!isPublished(round.qualification) && !isPublished(round.result) && !isPublished(round.grid))) return;
-  const tab = isPublished(round.qualification) ? "qualifying" : isPublished(round.grid) ? "finalists" : "points";
-  return "/standings?" + new URLSearchParams({ series: division, season: seasonId, round: raceId, tab });
+  return "/standings?" + new URLSearchParams({ series: division, season: seasonId });
 }

@@ -10,6 +10,7 @@ import { aggregatePublications, buildChampionship, isPublished } from "@/lib/cha
 import type { Division } from "@/lib/competition";
 import { divisionSlugs } from "@/lib/portal";
 import type { RaceSeason } from "@/lib/race-schedule";
+import { resultsHref } from "@/lib/race-results";
 import { regulationHref } from "@/lib/registration/regulations";
 import { seriesData } from "@/lib/series";
 import { EmptyState } from "../portal-ui";
@@ -154,8 +155,12 @@ export function StandingsHub({ seasons, championships, rounds, preview }: {
       </>}
       {tab === "points" && <>
         {canShowRows ? rows.length ? <PointsMatrix rows={rows} rounds={ordered} activeRound={roundSelected?.id} onRound={(id) => update("round", id)} /> : noMatches : empty}
-        {roundSelected && championship && bulletin?.result && isPublished(bulletin.result) &&
-          <RoundResults publication={bulletin.result} drivers={championship.drivers} round={roundSelected} matches={matches} />}
+        {roundSelected && championship && bulletin?.result && isPublished(bulletin.result) && <>
+          <Link className="text-link" href={resultsHref({ id: roundSelected.id, division, seasonId: championship.seasonId }, "final")}>
+            {portal("raceResults.openRace")}
+          </Link>
+          <RoundResults publication={bulletin.result} drivers={championship.drivers} round={roundSelected} matches={matches} />
+        </>}
       </>}
       {tab === "statistics" && (championship && derived && hasStats ? <StandingsStats key={division + season?.id} championship={championship}
         rows={derived.rows} rounds={scope} snapshots={derived.snapshots} matches={matches} /> : empty)}

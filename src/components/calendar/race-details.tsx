@@ -11,7 +11,7 @@ import { SportTimeZoneSelect } from "./sport-time-zone-select";
 import { useCalendarQuery } from "./calendar-url";
 import { CalendarPreviewNotice, RaceDate, RaceStatusBadge, SessionTime } from "./event-card";
 
-export function RaceDetails({ race, season, preview, now, standingsHref, courseHref }: { race: Race; season?: string; preview: boolean; now: number; standingsHref?: string; courseHref?: string }) {
+export function RaceDetails({ race, season, preview, now, resultsHref, standingsHref, courseHref }: { race: Race; season?: string; preview: boolean; now: number; resultsHref?: string; standingsHref?: string; courseHref?: string }) {
   const t = useTranslations("schedule");
   const locale = useLocale();
   const portal = useTranslations();
@@ -92,7 +92,8 @@ export function RaceDetails({ race, season, preview, now, standingsHref, courseH
         </section>
         <section aria-labelledby="sport-title">
           <h2 id="sport-title">{t("sport")}</h2>
-          {available.length || standingsHref ? <ul className="race-sport">
+          {available.length || resultsHref || standingsHref ? <ul className="race-sport">
+            {resultsHref && <li><Link className="text-link" href={resultsHref}>{portal("sections.results.title")}</Link></li>}
             {standingsHref && <li><Link className="text-link" href={standingsHref}>{portal("championship.title")}</Link></li>}
             {available.map((key) => {
             const href = race.resources?.[key];

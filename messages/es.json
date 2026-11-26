@@ -102,14 +102,14 @@
       "link": "Ver calendario"
     },
     "standings": {
-      "title": "Clasificación",
-      "description": "Posiciones y puntos de cada división.",
+      "title": "Clasificación general",
+      "description": "Posiciones y puntos acumulados de cada división durante la temporada.",
       "empty": "Todavía no hay posiciones ni puntos publicados.",
-      "link": "Ver clasificación"
+      "link": "Ver clasificación general"
     },
     "results": {
       "title": "Resultados",
-      "description": "Clasificaciones finales por carrera y división.",
+      "description": "Consulta los tiempos de clasificación previa y los resultados de la carrera final de cada ronda.",
       "empty": "Aún no hay resultados publicados.",
       "link": "Ver resultados"
     },
@@ -627,8 +627,8 @@
     }
   },
   "championship": {
-    "title": "Clasificación deportiva",
-    "intro": "Posiciones del campeonato, tiempos de clasificación y resultados por ronda de las divisiones MFG.",
+    "title": "Clasificación general",
+    "intro": "Posiciones y puntos acumulados de cada división durante la temporada.",
     "preview": "Entorno de desarrollo con pilotos, tiempos y puntuaciones de prueba.",
     "division": "División",
     "season": "Temporada",
@@ -817,5 +817,29 @@
         "body": "Consulta los avisos y publicaciones públicas del portal."
       }
     }
+  },
+  "raceResults": {
+    "find": "Buscar resultados",
+    "session": "Sesión",
+    "tabs": "Sesiones de competición",
+    "qualifying": "Clasificación previa",
+    "final": "Carrera final",
+    "noRaces": "Sin carreras publicadas",
+    "official": "Oficial",
+    "finalEmpty": "Resultados de la final pendientes",
+    "timedEmpty": "Tiempos de la sesión pendientes",
+    "sessionPending": "Los datos aparecerán cuando se publique el boletín de esta sesión.",
+    "divisionEmpty": "Esta división aún no tiene carreras con resultados publicados.",
+    "history": "Historial de resultados",
+    "historyEmpty": "Todavía no hay otras carreras con resultados publicados para esta selección.",
+    "openRace": "Ver resultados de la carrera",
+    "related": "Enlaces de competición",
+    "totalTime": "Tiempo total",
+    "winnerGap": "Diferencia con el ganador",
+    "penalties": "Penalizaciones",
+    "pointsDeducted": "−{points} pts",
+    "lapsBehind": "{laps, plural, one {+1 vuelta} other {+# vueltas}}",
+    "podium": "Podio de la carrera",
+    "position": "Posición {position}"
   }
 }

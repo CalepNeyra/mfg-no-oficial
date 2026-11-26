@@ -7,6 +7,7 @@ import type { Locale } from "@/i18n/routing";
 import { getCalendarData } from "@/lib/calendar-data";
 import { eventStandingsHref } from "@/lib/championship-data";
 import { circuitHref, findCircuit } from "@/lib/public-information";
+import { resultsHref } from "@/lib/race-results";
 import { raceHref, type CalendarSearch } from "@/lib/race-schedule";
 import "../schedule.css";
 
@@ -30,5 +31,6 @@ export default async function RaceEventPage(props: Props) {
   setRequestLocale(locale);
   const standingsHref = preview ? undefined : eventStandingsHref(race.division, race.seasonId, race.id);
   const courseHref = race.courseId && findCircuit(race.courseId) ? circuitHref(race.courseId) : undefined;
-  return <div className="competition-calendar"><RaceDetails race={race} season={season} preview={preview} now={now} standingsHref={standingsHref} courseHref={courseHref} /></div>;
+  return <div className="competition-calendar"><RaceDetails race={race} season={season} preview={preview} now={now}
+    resultsHref={preview ? undefined : resultsHref(race)} standingsHref={standingsHref} courseHref={courseHref} /></div>;
 }

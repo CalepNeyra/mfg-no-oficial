@@ -76,7 +76,7 @@ export default async function Home({ params }: Props) {
       </HomeSection>
 
       <HomeSection id="results" title={t("front.results")} tone="paper" link={{ href: "/results", label: t("sections.results.link") }}>
-        <HomeResults />
+        <HomeResults locale={locale} />
       </HomeSection>
 
       <HomeRegistration locale={locale} />

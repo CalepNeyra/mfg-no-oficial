@@ -102,14 +102,14 @@
       "link": "View calendar"
     },
     "standings": {
-      "title": "Standings",
-      "description": "Positions and points for each division.",
+      "title": "Championship standings",
+      "description": "Season standings and cumulative points for each division.",
       "empty": "No positions or points have been published yet.",
-      "link": "View standings"
+      "link": "View championship standings"
     },
     "results": {
       "title": "Results",
-      "description": "Final results by race and division.",
+      "description": "Explore qualifying times and final race results for each round.",
       "empty": "No results have been published yet.",
       "link": "View results"
     },
@@ -627,8 +627,8 @@
     }
   },
   "championship": {
-    "title": "Competition standings",
-    "intro": "Championship positions, qualifying times and round results for the MFG divisions.",
+    "title": "Championship standings",
+    "intro": "Season standings and cumulative points for each division.",
     "preview": "Development preview with sample drivers, times and scores.",
     "division": "Division",
     "season": "Season",
@@ -817,5 +817,29 @@
         "body": "Read public notices and updates from the portal."
       }
     }
+  },
+  "raceResults": {
+    "find": "Find results",
+    "session": "Session",
+    "tabs": "Competition sessions",
+    "qualifying": "Qualifying",
+    "final": "Final race",
+    "noRaces": "No published races",
+    "official": "Official",
+    "finalEmpty": "Final race results pending",
+    "timedEmpty": "Session times pending",
+    "sessionPending": "Results will appear when the session bulletin is published.",
+    "divisionEmpty": "This division has no races with published results yet.",
+    "history": "Results archive",
+    "historyEmpty": "There are no other published race results for this selection yet.",
+    "openRace": "View race results",
+    "related": "Competition links",
+    "totalTime": "Total time",
+    "winnerGap": "Gap to winner",
+    "penalties": "Penalties",
+    "pointsDeducted": "−{points} pts",
+    "lapsBehind": "{laps, plural, one {+1 lap} other {+# laps}}",
+    "podium": "Race podium",
+    "position": "Position {position}"
   }
 }

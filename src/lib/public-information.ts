@@ -3,6 +3,7 @@ import "server-only";
 import type { PortalImage } from "@/components/portal-ui";
 import { championships, publicationRounds } from "./championship-data";
 import { buildChampionship, isPublished, pointScale } from "./championship-scoring";
+import { resultsHref } from "./race-results";
 import { calendarSeasons, races, type Division } from "./competition";
 
 export type PublicDriverSummary = {
@@ -80,7 +81,8 @@ export function driverHistory(driver: DriverProfile) {
       const record = isPublished(result) ? result?.entries.find(({ driverId }) => driverId === entry.id) : undefined;
       if (!record) return [];
       const points = standings.snapshots[round.id]?.find(({ driver }) => driver.id === entry.id)?.cells[round.id];
-      return [{ ...round, position: record.finalPosition, outcome: record.outcome,
+      return [{ ...round, href: resultsHref({ id: round.id, division: season.division, seasonId: season.seasonId }, "final"),
+        position: record.finalPosition, outcome: record.outcome,
         points: points ? (points.earned - points.deduction) / pointScale : undefined }];
     });
     if (!published.length) return [];

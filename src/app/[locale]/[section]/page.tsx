@@ -15,7 +15,7 @@ import { divisions, divisionSlugs, sections } from "@/lib/portal";
 import "../information.css";
 
 const legacyPaths = { cars: "/drivers", "entry-list": "/registration" } as const;
-const separateRoutes = ["calendar", "standings", "regulations", "drivers", "circuits"];
+const separateRoutes = ["calendar", "standings", "results", "regulations", "drivers", "circuits"];
 
 function legacyPath(section: string) {
   return Object.hasOwn(legacyPaths, section) ? legacyPaths[section as keyof typeof legacyPaths] : undefined;

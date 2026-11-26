@@ -1,4 +1,4 @@
-import type { Championship, ChampionshipRound, ChampionshipRow, Publication, PublicationState, TieBreak } from "./championship";
+import type { Championship, ChampionshipRound, ChampionshipRow, Publication, PublicationState, ResultEntry, ScoringPolicy, TieBreak } from "./championship";
 
 export const pointScale = 1000;
 // Reference only. A published season needs its own ratified policy and revision.
@@ -12,6 +12,13 @@ export function pointsToUnits(value: string) {
   if (!/^\d{1,9}(?:\.\d{1,3})?$/.test(value)) throw new Error("Invalid point value: " + value);
   const [whole, decimals = ""] = value.split(".");
   return Number(whole) * pointScale + Number(decimals.padEnd(3, "0"));
+}
+
+export function scoreRoundEntry(policy: ScoringPolicy, { award, deduction }: ResultEntry) {
+  return {
+    earned: pointsToUnits(award ? policy[award.source][award.position] ?? "0" : "0"),
+    deduction: pointsToUnits(deduction ?? "0"),
+  };
 }
 
 export function isPublished(value?: Publication): boolean {
@@ -54,9 +61,7 @@ export function buildChampionship(championship: Championship, rounds: readonly C
         driver, position: 0, points: 0, rounds: 0, wins: 0, podiums: 0, poles: 0, finals: 0, deduction: 0, gap: 0, cells: {},
       };
       if (row.cells[round.id]) continue;
-      const award = entry.award;
-      const earned = pointsToUnits(award ? policy[award.source][award.position] ?? "0" : "0");
-      const deduction = pointsToUnits(entry.deduction ?? "0");
+      const { earned, deduction } = scoreRoundEntry(policy, entry);
       row.points += earned - deduction;
       row.deduction += deduction;
       row.rounds += Number(entry.outcome !== "absent");

@@ -102,14 +102,14 @@
       "link": "日程を見る"
     },
     "standings": {
-      "title": "ランキング",
-      "description": "各カテゴリーの順位とポイントです。",
+      "title": "総合ランキング",
+      "description": "各カテゴリーのシーズン総合順位と累積ポイントを確認できます。",
       "empty": "順位とポイントはまだ公開されていません。",
-      "link": "ランキングを見る"
+      "link": "総合ランキングを見る"
     },
     "results": {
       "title": "レース結果",
-      "description": "レース・カテゴリー別の最終結果です。",
+      "description": "各ラウンドの予選タイムと決勝結果を確認できます。",
       "empty": "レース結果はまだ公開されていません。",
       "link": "結果を見る"
     },
@@ -627,8 +627,8 @@
     }
   },
   "championship": {
-    "title": "競技ランキング",
-    "intro": "MFG各カテゴリーの選手権順位、予選タイム、ラウンド別結果を確認できます。",
+    "title": "総合ランキング",
+    "intro": "各カテゴリーのシーズン総合順位と累積ポイントを確認できます。",
     "preview": "開発用プレビューです。ドライバー、タイム、ポイントはテストデータです。",
     "division": "カテゴリー",
     "season": "シーズン",
@@ -664,7 +664,7 @@
     "roundResults": "ラウンド結果",
     "eventInfo": "大会情報",
     "tab": {
-      "general": "総合順位",
+      "general": "総合ランキング",
       "qualifying": "タイム予選",
       "finalists": "決勝進出者",
       "points": "ラウンド別ポイント",
@@ -817,5 +817,29 @@
         "body": "ポータルからのお知らせと公開記事をご覧ください。"
       }
     }
+  },
+  "raceResults": {
+    "find": "結果を絞り込む",
+    "session": "セッション",
+    "tabs": "競技セッション",
+    "qualifying": "予選",
+    "final": "決勝",
+    "noRaces": "公開済みのレースなし",
+    "official": "公式結果",
+    "finalEmpty": "決勝結果は公開待ちです",
+    "timedEmpty": "セッションタイムは公開待ちです",
+    "sessionPending": "セッションの公式発表後に結果が表示されます。",
+    "divisionEmpty": "このカテゴリーで結果が公開されたレースはまだありません。",
+    "history": "結果アーカイブ",
+    "historyEmpty": "この条件に該当する他のレース結果はまだ公開されていません。",
+    "openRace": "レース結果を見る",
+    "related": "競技関連リンク",
+    "totalTime": "総合タイム",
+    "winnerGap": "優勝者との差",
+    "penalties": "ペナルティ",
+    "pointsDeducted": "−{points}ポイント",
+    "lapsBehind": "+{laps}周",
+    "podium": "決勝表彰台",
+    "position": "{position}位"
   }
 }

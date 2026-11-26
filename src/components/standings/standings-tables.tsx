@@ -51,7 +51,7 @@ export function QualifyingTable({ publication, championship, matches }: {
   const t = useTranslations("championship");
   const format = useFormatter();
   const drivers = new Map(championship.drivers.map((driver) => [driver.id, driver]));
-  const sorted = [...publication.entries].sort((a, b) => a.position - b.position);
+  const sorted = [...publication.entries].sort((a, b) => (a.position ?? Infinity) - (b.position ?? Infinity));
   const top = sorted[0]?.milliseconds;
   const rules = championship.qualifyingFormat;
   const zones: { code: "final" | "points" | "outside"; range: string }[] = [];
@@ -75,11 +75,11 @@ export function QualifyingTable({ publication, championship, matches }: {
       {sorted.map(({ driverId, position, milliseconds, day }, index) => {
         const driver = drivers.get(driverId);
         if (!driver || !matches(driver)) return null;
-        const zone = zoneAt(position, championship.qualifyingFormat);
+        const zone = position === undefined ? undefined : zoneAt(position, championship.qualifyingFormat);
         const boundary = zone && (position === (championship.qualifyingFormat?.finalPlaces ?? -2) + 1 ||
           position === (championship.qualifyingFormat?.pointPlaces ?? -2) + 1);
         return <tr key={driverId} data-zone={zone} data-boundary={boundary || undefined}>
-          <td>{position}</td><th scope="row"><DriverName driver={driver} /></th><td>{driver.number}</td>
+          <td>{position ?? "\u2014"}</td><th scope="row"><DriverName driver={driver} /></th><td>{driver.number}</td>
           <td><Nationality code={driver.countryCode} /></td><td><VehicleName driver={driver} /></td>
           <td><strong>{milliseconds === undefined ? "—" : formatLap(milliseconds)}</strong></td>
           <td>{position === 1 ? "—" : delta(milliseconds, top)}</td>
@@ -99,8 +99,9 @@ export function Finalists({ grid, qualification, championship, matches, source }
   const t = useTranslations("championship");
   const drivers = new Map(championship.drivers.map((driver) => [driver.id, driver]));
   const qualifying = new Map(qualification?.entries.map((entry) => [entry.driverId, entry]));
-  const entries = source === "grid" ? grid?.entries : qualification?.entries.filter(({ position }) =>
-    championship.qualifyingFormat && position <= championship.qualifyingFormat.finalPlaces);
+  const entries = source === "grid" ? grid?.entries : qualification?.entries.flatMap((entry) =>
+    entry.position !== undefined && championship.qualifyingFormat && entry.position <= championship.qualifyingFormat.finalPlaces
+      ? [{ driverId: entry.driverId, position: entry.position }] : []);
   const finalists = [...(entries ?? [])].sort((a, b) => a.position - b.position).flatMap(({ position, driverId }) => {
     const driver = drivers.get(driverId);
     return driver && matches(driver) ? [{ position, driver, time: qualifying.get(driverId)?.milliseconds }] : [];

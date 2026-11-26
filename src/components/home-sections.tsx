@@ -4,11 +4,13 @@ import { getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
-import { gallery, partners, races, results } from "@/lib/competition";
+import { gallery, partners } from "@/lib/competition";
 import { homeMedia } from "@/lib/home-media";
 import { divisionSlugs, sections } from "@/lib/portal";
 import { entryCatalog } from "@/lib/registration/catalog";
-import { raceHref, sortRaces } from "@/lib/race-schedule";
+import { raceHref } from "@/lib/race-schedule";
+import { newestResultEvents, podiumEntries, resultsHref } from "@/lib/race-results";
+import { publicResultsData } from "@/lib/race-results-data";
 import { driverHref, publicDrivers } from "@/lib/public-information";
 import { regulationHref } from "@/lib/registration/regulations";
 import { seriesData } from "@/lib/series";
@@ -82,23 +84,26 @@ export async function HomeProfiles() {
   </div>;
 }
 
-export async function HomeResults() {
+export async function HomeResults({ locale }: { locale: Locale }) {
   const t = await getTranslations();
-  const completed = sortRaces(races.filter(({ state, schedule }) => state === "finished" && schedule)).reverse();
-  const race = completed.find(({ id }) => results.some(({ raceId }) => raceId === id));
-  const result = race && results.find(({ raceId }) => raceId === race.id);
-  if (!race || !result) return <EmptyState icon={Flag}>{t("sections.results.empty")}</EmptyState>;
+  const latest = newestResultEvents(publicResultsData(locale).events).flatMap((race) => {
+    const final = race.sessions.find((session) => session.kind === "final");
+    const places = final ? podiumEntries(final.bulletin.entries, race.drivers) : [];
+    return places.length ? [{ race, places }] : [];
+  })[0];
+  if (!latest) return <EmptyState icon={Flag}>{t("sections.results.empty")}</EmptyState>;
+  const { race, places } = latest;
 
   return (
     <article className="front-result">
       <p className="overline">{t(`divisions.${race.division}.title`)}</p>
       <h3>{race.title}</h3>
       <ol className="front-podium">
-        {[...result.positions].sort((a, b) => a.position - b.position).slice(0, 3).map(({ position, driver, car }) => (
-          <li key={position}><strong>{position}</strong><div><p>{driver}</p><p>{car}</p></div></li>
+        {places.map(({ position, driver }) => (
+          <li key={position}><strong>{position}</strong><div><p>{driver.name}</p><p>{driver.vehicle.manufacturer} {driver.vehicle.model}</p></div></li>
         ))}
       </ol>
-      <ActionLink href={result.href}>{t("sections.results.link")}</ActionLink>
+      <ActionLink href={resultsHref(race, "final")}>{t("sections.results.link")}</ActionLink>
     </article>
   );
 }

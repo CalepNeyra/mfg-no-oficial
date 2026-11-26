@@ -24,12 +24,6 @@ export type Standing = {
   points: number;
 };
 
-export type RaceResult = {
-  raceId: string;
-  href: string;
-  positions: readonly Pick<Standing, "position" | "driver" | "car">[];
-};
-
 export type MediaItem = {
   kind: "races" | "cars" | "drivers" | "qualifying" | "events";
   title: string;
@@ -43,6 +37,5 @@ export type Partner = { name: string; image: PortalImage; href?: string };
 export const races: readonly Race[] = [];
 export const calendarSeasons: readonly RaceSeason[] = [];
 export const news: readonly NewsItem[] = [];
-export const results: readonly RaceResult[] = [];
 export const gallery: readonly MediaItem[] = [];
 export const partners: readonly Partner[] = [];
